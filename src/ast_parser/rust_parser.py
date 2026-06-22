@@ -4,6 +4,10 @@ from typing import Optional
 from tree_sitter import Language, Parser
 import tree_sitter_rust as tsrust
 from src.ast_parser.models import CodeSymbol
+from src.ast_parser.javascript_parser import (
+    is_embedding_candidate,
+    construct_retrieval_text,
+)
 
 # Initialize Rust Language
 RUST_LANG = Language(tsrust.language())
@@ -67,6 +71,31 @@ def get_rust_node_name(node, source_code: bytes) -> str:
             header = text.split(delim, 1)[0].strip()
             return " ".join(header.split())
     return node.type
+
+
+def get_rust_signature(node, source_code: bytes) -> str:
+    """Extracts functional signature block from Rust nodes."""
+    body_node = None
+    for child in node.children:
+        if child.type in (
+            "declaration_list",
+            "enum_variant_list",
+            "field_declaration_list",
+            "block",
+            "impl_body",
+        ):
+            body_node = child
+            break
+
+    if body_node is not None:
+        sig_bytes = source_code[node.start_byte : body_node.start_byte]
+    else:
+        text = source_code[node.start_byte : node.end_byte].decode(
+            "utf-8", errors="ignore"
+        )
+        sig_bytes = text.splitlines()[0].encode("utf-8")
+
+    return sig_bytes.decode("utf-8", errors="ignore").strip()
 
 
 def extract_rust_import_names(node, source_code: bytes) -> list[str]:
@@ -200,7 +229,6 @@ class RustVisitor:
         name = get_impl_name(node, self.source_code)
         self.add_symbol(node, "impl", name, parent_symbol)
 
-        # Impl block contains methods. Traverse inside the impl block
         for child in node.children:
             self.visit(child, parent_symbol=name)
 
@@ -229,6 +257,20 @@ class RustVisitor:
         )
         docstring = get_preceding_docstring(node, self.source_code)
         chunk_id = f"{self.repo}::{self.file_path}::{symbol_name}::{start_line}"
+        symbol_id = f"{self.repo}::{self.file_path}::{symbol_name}"
+
+        signature = get_rust_signature(node, self.source_code)
+        candidate = is_embedding_candidate(symbol_type)
+        exported = is_rust_exported(node)
+
+        retrieval_text = construct_retrieval_text(
+            language=self.language,
+            symbol_type=symbol_type,
+            symbol_name=symbol_name,
+            file_path=self.file_path,
+            docstring=docstring,
+            parent_symbol=parent_symbol,
+        )
 
         symbol = CodeSymbol(
             repo=self.repo,
@@ -245,5 +287,10 @@ class RustVisitor:
             docstring=docstring,
             chunk_id=chunk_id,
             metadata={},
+            exported=exported,
+            embedding_candidate=candidate,
+            signature=signature,
+            retrieval_text=retrieval_text,
+            symbol_id=symbol_id,
         )
         self.symbols.append(symbol)

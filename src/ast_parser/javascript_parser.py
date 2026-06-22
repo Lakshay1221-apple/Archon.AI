@@ -9,11 +9,40 @@ from src.ast_parser.models import CodeSymbol
 JS_LANG = Language(tsjs.language())
 
 
-def get_preceding_docstring(node, source_code: bytes) -> Optional[str]:
-    """Helper to walk backwards and retrieve contiguous comment block nodes preceding the node.
+def is_embedding_candidate(symbol_type: str) -> bool:
+    """Checks if a symbol type is eligible for embedding."""
+    return symbol_type in (
+        "function",
+        "method",
+        "class",
+        "interface",
+        "enum",
+        "struct",
+        "trait",
+        "type_alias",
+        "chunk",
+        "documentation_chunk",
+    )
 
-    Walks up the parent chain (e.g. through variable declarators and export statements) to locate the comment.
-    """
+
+def construct_retrieval_text(
+    language: str,
+    symbol_type: str,
+    symbol_name: str,
+    file_path: str,
+    docstring: Optional[str] = None,
+    parent_symbol: Optional[str] = None,
+) -> str:
+    """Constructs a semantically rich natural language sentence for retrieval."""
+    lang_str = language.capitalize()
+    parent_str = f" in class '{parent_symbol}'" if parent_symbol else ""
+    desc_str = f" Description: {docstring.strip()}" if docstring else ""
+    desc_str = " ".join(desc_str.split())
+    return f"{lang_str} {symbol_type} '{symbol_name}'{parent_str} defined in {file_path}.{desc_str}".strip()
+
+
+def get_preceding_docstring(node, source_code: bytes) -> Optional[str]:
+    """Helper to walk backwards and retrieve contiguous comment block nodes preceding the node."""
     curr_target = node
     while curr_target.parent is not None and curr_target.parent.type != "program":
         if curr_target.parent.type in (
@@ -71,6 +100,48 @@ def get_arrow_function_name(node, source_code: bytes) -> str:
     return "anonymous_arrow_function"
 
 
+def is_node_exported(node) -> bool:
+    """Checks if a node is defined inside an export statement."""
+    curr = node.parent
+    while curr is not None:
+        if curr.type in (
+            "export_statement",
+            "export_declaration",
+        ) or curr.type.startswith("export"):
+            return True
+        curr = curr.parent
+    return False
+
+
+def get_js_signature(node, source_code: bytes) -> str:
+    """Extracts a definition signature header from the tree-sitter node."""
+    body_node = None
+    for child in node.children:
+        if child.type in (
+            "statement_block",
+            "block",
+            "class_body",
+            "object",
+            "enum_body",
+        ):
+            body_node = child
+            break
+
+    if body_node is not None:
+        sig_bytes = source_code[node.start_byte : body_node.start_byte]
+    else:
+        text = source_code[node.start_byte : node.end_byte].decode(
+            "utf-8", errors="ignore"
+        )
+        sig_bytes = text.splitlines()[0].encode("utf-8")
+
+    sig_str = sig_bytes.decode("utf-8", errors="ignore").strip()
+    # Strip any trailing assignment or braces if they remain
+    if sig_str.endswith("="):
+        sig_str = sig_str[:-1].strip()
+    return sig_str
+
+
 def extract_js_import_names(node, source_code: bytes) -> list[str]:
     """Extracts local imported names from an import_statement node."""
     names = []
@@ -111,9 +182,52 @@ def extract_js_import_names(node, source_code: bytes) -> list[str]:
 
 
 def extract_js_export_names(node, source_code: bytes) -> list[str]:
-    """Extracts local exported names from export_statement / export_declaration nodes."""
+    """Extracts local exported names from export_statement / export_declaration nodes.
+
+    Cleans up default exports and function calls like defineConfig.
+    """
     names = []
 
+    # Check for default export
+    is_default = False
+    for child in node.children:
+        if child.type == "default":
+            is_default = True
+            break
+
+    if is_default:
+        default_idx = -1
+        for idx, child in enumerate(node.children):
+            if child.type == "default":
+                default_idx = idx
+                break
+
+        if default_idx != -1 and default_idx + 1 < len(node.children):
+            val_node = node.children[default_idx + 1]
+            if val_node.type == "identifier":
+                return [
+                    source_code[val_node.start_byte : val_node.end_byte].decode(
+                        "utf-8", errors="ignore"
+                    )
+                ]
+            elif val_node.type == "call_expression":
+                fn_node = val_node.children[0]
+                return [
+                    source_code[fn_node.start_byte : fn_node.end_byte].decode(
+                        "utf-8", errors="ignore"
+                    )
+                ]
+            elif val_node.type in ("class_declaration", "function_declaration"):
+                for c in val_node.children:
+                    if c.type == "identifier":
+                        return [
+                            source_code[c.start_byte : c.end_byte].decode(
+                                "utf-8", errors="ignore"
+                            )
+                        ]
+        return ["default_export"]
+
+    # Non-default exports
     def traverse(curr):
         if curr.type == "export_specifier":
             ids = [c for c in curr.children if c.type == "identifier"]
@@ -238,7 +352,6 @@ class JSVisitor:
     def visit_arrow_function(self, node, parent_symbol: Optional[str]) -> None:
         name = get_arrow_function_name(node, self.source_code)
         if name == "anonymous_arrow_function":
-            # Skip inline callbacks or anonymous closures
             return
 
         symbol_name = f"{parent_symbol}.{name}" if parent_symbol else name
@@ -256,7 +369,6 @@ class JSVisitor:
 
         self.add_symbol(node, "class", name, None)
 
-        # Traverse methods inside the class body
         for child in node.children:
             self.visit(child, parent_symbol=name)
 
@@ -282,7 +394,6 @@ class JSVisitor:
         names = extract_js_export_names(node, self.source_code)
         symbol_name = ", ".join(names) if names else "export"
         self.add_symbol(node, "export", symbol_name, None)
-        # RECURSE into the children of the export statement to extract nested function/class/etc.
         for child in node.children:
             self.visit(child, None)
 
@@ -296,6 +407,21 @@ class JSVisitor:
         )
         docstring = get_preceding_docstring(node, self.source_code)
         chunk_id = f"{self.repo}::{self.file_path}::{symbol_name}::{start_line}"
+        symbol_id = f"{self.repo}::{self.file_path}::{symbol_name}"
+
+        # Signature and candidates
+        signature = get_js_signature(node, self.source_code)
+        candidate = is_embedding_candidate(symbol_type)
+        exported = is_node_exported(node)
+
+        retrieval_text = construct_retrieval_text(
+            language=self.language,
+            symbol_type=symbol_type,
+            symbol_name=symbol_name,
+            file_path=self.file_path,
+            docstring=docstring,
+            parent_symbol=parent_symbol,
+        )
 
         symbol = CodeSymbol(
             repo=self.repo,
@@ -312,5 +438,10 @@ class JSVisitor:
             docstring=docstring,
             chunk_id=chunk_id,
             metadata={},
+            exported=exported,
+            embedding_candidate=candidate,
+            signature=signature,
+            retrieval_text=retrieval_text,
+            symbol_id=symbol_id,
         )
         self.symbols.append(symbol)

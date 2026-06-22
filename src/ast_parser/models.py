@@ -22,6 +22,11 @@ class CodeSymbol:
     docstring: Optional[str]
     chunk_id: str
     metadata: dict[str, Any]
+    exported: bool = False
+    embedding_candidate: bool = False
+    signature: Optional[str] = None
+    retrieval_text: Optional[str] = None
+    symbol_id: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         """Converts the CodeSymbol instance to a standard dictionary."""

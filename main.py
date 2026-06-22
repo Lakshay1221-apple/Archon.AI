@@ -3,6 +3,7 @@
 import argparse
 import sys
 import time
+from pathlib import Path
 from src.ingestion.clone_repo import clone_repository, extract_repo_name
 from src.parsing.parser import parse_repository, save_dataset
 from src.utils.config import load_config
@@ -27,7 +28,7 @@ def main() -> None:
         "-o",
         type=str,
         default="data/processed/ast_dataset.json",
-        help="Output path for the generated dataset JSON file.",
+        help="Output path for the generated AST dataset JSON file.",
     )
 
     args = parser.parse_args()
@@ -58,13 +59,19 @@ def main() -> None:
         parse_duration = time.perf_counter() - parse_start
         logger.info(f"Parsing phase complete in {parse_duration:.2f}s.")
 
-        # 3. Save dataset
+        # 3. Save datasets
         save_start = time.perf_counter()
+
+        # Save complete AST dataset
         save_dataset(records, args.output)
+
+        # Filter and save dedicated Embedding dataset
+        embedding_records = [r for r in records if r.get("embedding_candidate")]
+        embedding_output_path = str(Path(args.output).parent / "embedding_dataset.json")
+        save_dataset(embedding_records, embedding_output_path)
+
         save_duration = time.perf_counter() - save_start
-        logger.info(
-            f"Dataset saving phase complete in {save_duration:.2f}s. Saved to: {args.output}"
-        )
+        logger.info(f"Dataset saving phase complete in {save_duration:.2f}s.")
 
         total_duration = time.perf_counter() - total_start
 
@@ -79,17 +86,25 @@ def main() -> None:
 
         # 5. Print statistics to console
         print(f"\nFiles Parsed: {stats['files_processed']}\n")
-        print(f"Functions: {stats['functions']}")
-        print(f"Classes: {stats['classes']}")
-        print(f"Methods: {stats['methods']}")
-        print(f"Structs: {stats['structs']}")
-        print(f"Enums: {stats['enums']}")
-        print(f"Traits: {stats['traits']}\n")
-        print(f"Imports: {stats['imports']}")
-        print(f"Exports: {stats['exports']}\n")
-        print(f"Fallback Chunks: {stats['fallback_chunks']}")
-        print(f"Parse Failures: {stats['parse_failures']}\n")
-        print(f"Total Symbols: {stats['total_symbols']}")
+
+        print("--- AST Optimization Report ---")
+        print(f"Total AST records (raw): {stats['total_ast_records']}")
+        print(f"Total embedding candidates: {stats['total_embedding_candidates']}")
+        print(f"Number of imports removed: {stats['imports_removed']}")
+        print(f"Number of exports removed: {stats['exports_removed']}")
+        print(f"Duplicate symbols removed/merged: {stats['duplicates_removed']}")
+        print(
+            f"Parent-child relationships discovered: {stats['parent_child_relationships']}\n"
+        )
+
+        print("Symbol Type Distribution:")
+        dist = stats.get("symbol_type_distribution", {})
+        for stype, count in sorted(dist.items()):
+            print(f"  - {stype}: {count}")
+
+        print(f"\nFallback Chunks: {stats['fallback_chunks']}")
+        print(f"Parse Failures: {stats['parse_failures']}")
+        print(f"\nTotal Dataset Symbols: {stats['total_symbols']}")
 
     except Exception as e:
         logger.error(f"Pipeline failed in session {SESSION_ID}: {e}", exc_info=True)

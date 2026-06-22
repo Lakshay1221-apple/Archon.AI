@@ -33,8 +33,19 @@ class GenericParser:
 
         for idx, (start_line, end_line, chunk_content) in enumerate(chunks):
             symbol_name = f"chunk_{idx + 1}"
-            # Unique chunk_id: repo::file::symbol_name::start_line
             chunk_id = f"{repo}::{file_path}::{symbol_name}::{start_line}"
+            symbol_id = f"{repo}::{file_path}::{symbol_name}"
+
+            # Extract first line as signature
+            lines = chunk_content.splitlines()
+            signature = lines[0].strip() if lines else f"Chunk {idx + 1}"
+            if len(signature) > 100:
+                signature = signature[:97] + "..."
+
+            lang_str = language.capitalize() if language else "Text"
+            retrieval_text = (
+                f"{lang_str} text chunk '{symbol_name}' defined in {file_path}."
+            )
 
             symbol = CodeSymbol(
                 repo=repo,
@@ -54,6 +65,11 @@ class GenericParser:
                     "chunk_index": idx,
                     "total_chunks": len(chunks),
                 },
+                exported=False,
+                embedding_candidate=True,
+                signature=signature,
+                retrieval_text=retrieval_text,
+                symbol_id=symbol_id,
             )
             symbols.append(symbol)
 
@@ -67,29 +83,23 @@ class GenericParser:
         if not lines:
             return [(1, 1, "")]
 
-        # Determine file type
         is_markdown = language.lower() in ("markdown", "md") or file_path_str.endswith(
             (".md", ".markdown")
         )
 
-        # Division points (0-indexed line numbers where a chunk boundary can occur)
         division_points = [0]
 
         if is_markdown:
-            # Split on markdown headings
             for idx, line in enumerate(lines):
                 if line.startswith(("# ", "## ", "### ", "#### ", "##### ", "###### ")):
                     if idx > 0 and idx not in division_points:
                         division_points.append(idx)
         else:
-            # Split on double newline / empty line boundaries
             for idx in range(1, len(lines)):
-                # If current line starts a paragraph (not empty) and previous line was empty/whitespace
                 if lines[idx].strip() and not lines[idx - 1].strip():
                     if idx not in division_points:
                         division_points.append(idx)
 
-        # Append final boundary
         division_points.append(len(lines))
         division_points = sorted(list(set(division_points)))
 
@@ -99,7 +109,6 @@ class GenericParser:
         while i < len(division_points) - 1:
             next_boundary = division_points[i + 1]
 
-            # If a single division block is itself too large, chunk it with fixed size and overlap
             if next_boundary - curr_start > self.target_lines + 10:
                 block_start = curr_start
                 block_end_limit = next_boundary
@@ -113,7 +122,6 @@ class GenericParser:
                 curr_start = next_boundary
                 i += 1
             else:
-                # Merge multiple smaller division blocks up to target_lines
                 group_end = next_boundary
                 j = i + 1
                 while j < len(division_points) - 1:

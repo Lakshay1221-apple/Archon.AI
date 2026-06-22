@@ -59,7 +59,6 @@ class TypeScriptParser:
         language: str = "typescript",
     ) -> list[CodeSymbol]:
         """Parses TypeScript/TSX content into CodeSymbol instances."""
-        # Determine language grammar (TS vs TSX)
         if language.lower() in ("tsx", "jsx") or file_path.endswith((".tsx", ".jsx")):
             lang_capsule = tsts.language_tsx()
         else:

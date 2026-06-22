@@ -50,18 +50,25 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
     ignored_directory_skips = 0
     languages_detected: set[str] = set()
 
-    # Symbol counts
+    # Symbol counts (for final dataset)
     functions_count = 0
     classes_count = 0
     methods_count = 0
     structs_count = 0
     enums_count = 0
     traits_count = 0
-    imports_count = 0
-    exports_count = 0
     fallback_chunks_count = 0
     parse_failures_count = 0
     total_symbols_count = 0
+
+    # Optimization/Validation metrics
+    total_ast_records_count = 0
+    total_embedding_candidates_count = 0
+    imports_removed_count = 0
+    exports_removed_count = 0
+    duplicates_removed_count = 0
+    parent_child_relationships_count = 0
+    symbol_type_distribution: dict[str, int] = {}
 
     logger.info(f"Parsing repository '{repo_name}' recursively at '{repo_path}'...")
 
@@ -138,16 +145,57 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
                 content=content,
             )
 
-            file_had_failure = False
+            total_ast_records_count += len(symbols)
+
+            # Deduplication and filtering pass for imports and exports
+            file_imports_removed = 0
+            file_exports_removed = 0
+            file_duplicates_removed = 0
+
+            # Collect export names to match with candidate symbols in the same file
+            file_export_names = set()
             for sym in symbols:
+                if sym.symbol_type == "export":
+                    file_exports_removed += 1
+                    # Clean/resolve export names
+                    names = [n.strip() for n in sym.symbol_name.split(",") if n.strip()]
+                    for name in names:
+                        file_export_names.add(name)
+                elif sym.symbol_type == "import":
+                    file_imports_removed += 1
+
+            # Build final candidate symbols list (excluding standalone imports/exports)
+            final_file_symbols = []
+            for sym in symbols:
+                if sym.symbol_type in ("import", "export"):
+                    continue
+
+                # Set exported = True if it matches any clean export name
+                base_name = sym.symbol_name.split(".")[0]
+                if (
+                    sym.symbol_name in file_export_names
+                    or base_name in file_export_names
+                ):
+                    if not sym.exported:
+                        sym.exported = True
+                        file_duplicates_removed += 1
+
+                final_file_symbols.append(sym)
+
+            # Save processed symbols
+            file_had_failure = False
+            for sym in final_file_symbols:
                 records.append(sym.to_dict())
 
-                # Check for parse failure flags in metadata
                 if sym.metadata.get("ast_parse_failure"):
                     file_had_failure = True
 
-                # Categorize symbol types for statistics
+                # Stats reporting aggregation
                 stype = sym.symbol_type
+                symbol_type_distribution[stype] = (
+                    symbol_type_distribution.get(stype, 0) + 1
+                )
+
                 if stype in ("function", "async_function", "arrow_function"):
                     functions_count += 1
                 elif stype in ("class", "interface"):
@@ -160,17 +208,24 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
                     enums_count += 1
                 elif stype == "trait":
                     traits_count += 1
-                elif stype == "import":
-                    imports_count += 1
-                elif stype == "export":
-                    exports_count += 1
                 elif stype == "chunk":
                     fallback_chunks_count += 1
+
+                if sym.parent_symbol is not None:
+                    parent_child_relationships_count += 1
+
+                if sym.embedding_candidate:
+                    total_embedding_candidates_count += 1
 
             if file_had_failure:
                 parse_failures_count += 1
 
-            total_symbols_count += len(symbols)
+            total_symbols_count += len(final_file_symbols)
+
+            # Aggregate validation counters
+            imports_removed_count += file_imports_removed
+            exports_removed_count += file_exports_removed
+            duplicates_removed_count += file_duplicates_removed
 
         except Exception as e:
             logger.error(
@@ -197,25 +252,26 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
         "structs": structs_count,
         "enums": enums_count,
         "traits": traits_count,
-        "imports": imports_count,
-        "exports": exports_count,
         "fallback_chunks": fallback_chunks_count,
         "parse_failures": parse_failures_count,
         "total_symbols": total_symbols_count,
         "records_generated": total_symbols_count,
         "large_chunked": 1 if fallback_chunks_count > 0 else 0,
+        # Optimization/Validation metrics
+        "total_ast_records": total_ast_records_count,
+        "total_embedding_candidates": total_embedding_candidates_count,
+        "imports_removed": imports_removed_count,
+        "exports_removed": exports_removed_count,
+        "duplicates_removed": duplicates_removed_count,
+        "parent_child_relationships": parent_child_relationships_count,
+        "symbol_type_distribution": symbol_type_distribution,
     }
 
     return records, stats
 
 
 def save_dataset(records: list[dict], output_path: str) -> None:
-    """Saves generated dataset records to a JSON file.
-
-    Args:
-        records: A list of record dictionaries.
-        output_path: The file path where the dataset should be saved.
-    """
+    """Saves generated dataset records to a JSON file."""
     path = Path(output_path)
     path.parent.mkdir(parents=True, exist_ok=True)
 

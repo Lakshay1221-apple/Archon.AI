@@ -378,3 +378,188 @@
 2026-06-22 14:20:20 | [20260622_142020] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-4/test_parsing_and_chunking0/mock-universal-repo/src/main.py' (Detected language: python)
 2026-06-22 14:20:20 | [20260622_142020] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
 2026-06-22 14:20:20 | [20260622_142020] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-4/test_parsing_and_chunking0/mock-universal-repo/rust-module/src/lib.rs' (Detected language: rust)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | Parsing repository 'mock-universal-repo' recursively at '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo'...
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'large_file.txt'. Language: text
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/large_file.txt' (Detected language: text)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/LICENSE' (Detected language: text)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'README.md'. Language: markdown
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/README.md' (Detected language: markdown)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/Makefile' (Detected language: makefile)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/Dockerfile' (Detected language: dockerfile)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/frontend/index.ts' (Detected language: typescript)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/frontend/app.js' (Detected language: javascript)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/rust-module/Cargo.toml' (Detected language: toml)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/src/logo.png' is classified as a binary file.
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/src/App.class' is classified as a binary file.
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/src/App.java' (Detected language: java)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/src/helper.o' is classified as a binary file.
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/src/core.cpp' (Detected language: cpp)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/src/helper.c' (Detected language: c)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/src/main.py' (Detected language: python)
+2026-06-22 14:58:27 | [20260622_145827] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-22 14:58:27 | [20260622_145827] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-5/test_parsing_and_chunking0/mock-universal-repo/rust-module/src/lib.rs' (Detected language: rust)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | Parsing repository 'mock-universal-repo' recursively at '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo'...
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'large_file.txt'. Language: text
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/large_file.txt' (Detected language: text)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/LICENSE' (Detected language: text)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'README.md'. Language: markdown
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/README.md' (Detected language: markdown)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/Makefile' (Detected language: makefile)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/Dockerfile' (Detected language: dockerfile)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/frontend/index.ts' (Detected language: typescript)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/frontend/app.js' (Detected language: javascript)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/rust-module/Cargo.toml' (Detected language: toml)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/src/logo.png' is classified as a binary file.
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/src/App.class' is classified as a binary file.
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/src/App.java' (Detected language: java)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/src/helper.o' is classified as a binary file.
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/src/core.cpp' (Detected language: cpp)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/src/helper.c' (Detected language: c)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/src/main.py' (Detected language: python)
+2026-06-22 15:01:11 | [20260622_150111] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-22 15:01:11 | [20260622_150111] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/rust-module/src/lib.rs' (Detected language: rust)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | Parsing repository 'smac-extension' recursively at '/home/lakshay/Archon AI/data/repositories/smac-extension'...
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'tsconfig.app.json'. Language: json
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/tsconfig.app.json' (Detected language: json)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Matched package.json name heuristic for 'package.json'. Language: json
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/package.json' (Detected language: json)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.html'. Language: html
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/index.html' (Detected language: html)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments guessed lexer via code heuristics for '.gitignore'. Language: gas
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/.gitignore' (Detected language: gas)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'tsconfig.json'. Language: json
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/tsconfig.json' (Detected language: json)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File skipped: '/home/lakshay/Archon AI/data/repositories/smac-extension/icon.jpg' is classified as a binary file.
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'README.md'. Language: markdown
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/README.md' (Detected language: markdown)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'package-lock.json'. Language: json
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/package-lock.json' (Detected language: json)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'vite.config.ts'. Language: typescript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/vite.config.ts' (Detected language: typescript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'eslint.config.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/eslint.config.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Matched shebang '#!' signature for 'start-smac.sh'. Language: bash
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/start-smac.sh' (Detected language: bash)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'tsconfig.node.json'. Language: json
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/tsconfig.node.json' (Detected language: json)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'manifest.json'. Language: json
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/manifest.json' (Detected language: json)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.tsx'. Language: tsx
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/App.tsx' (Detected language: tsx)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.css'. Language: css
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/index.css' (Detected language: css)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.tsx'. Language: tsx
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/main.tsx' (Detected language: tsx)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.css'. Language: css
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/App.css' (Detected language: css)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File skipped: '/home/lakshay/Archon AI/data/repositories/smac-extension/public/vite.svg' is classified as a binary file.
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'crypto.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/background/crypto.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/background/index.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'screenshot.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/background/screenshot.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File skipped: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/assets/react.svg' is classified as a binary file.
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'modal.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/content/modal.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/content/index.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'injected.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/utils/injected.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'dom.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/utils/dom.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'message.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/content/modes/message.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'profile.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/content/modes/profile.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'post.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/content/modes/post.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'remote.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/background/backends/remote.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'ollama.js'. Language: javascript
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/smac-extension/src/background/backends/ollama.js' (Detected language: javascript)
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | Successfully saved 173 records to data/processed/ast_dataset.json
+2026-06-22 15:01:34 | [20260622_150123] | INFO | parser | Successfully saved 173 records to data/processed/embedding_dataset.json
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | Parsing repository 'mock-universal-repo' recursively at '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo'...
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'large_file.txt'. Language: text
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/large_file.txt' (Detected language: text)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/LICENSE' (Detected language: text)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'README.md'. Language: markdown
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/README.md' (Detected language: markdown)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/Makefile' (Detected language: makefile)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/Dockerfile' (Detected language: dockerfile)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/frontend/index.ts' (Detected language: typescript)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/frontend/app.js' (Detected language: javascript)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/rust-module/Cargo.toml' (Detected language: toml)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/logo.png' is classified as a binary file.
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/App.class' is classified as a binary file.
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/App.java' (Detected language: java)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/helper.o' is classified as a binary file.
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/core.cpp' (Detected language: cpp)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/helper.c' (Detected language: c)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/main.py' (Detected language: python)
+2026-06-22 15:05:04 | [20260622_150504] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-22 15:05:04 | [20260622_150504] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/rust-module/src/lib.rs' (Detected language: rust)

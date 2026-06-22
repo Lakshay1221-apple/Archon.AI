@@ -5,6 +5,39 @@ from typing import Optional
 from src.ast_parser.models import CodeSymbol
 
 
+def is_embedding_candidate(symbol_type: str) -> bool:
+    """Checks if a symbol type is eligible for embedding."""
+    return symbol_type in (
+        "function",
+        "method",
+        "class",
+        "interface",
+        "enum",
+        "struct",
+        "trait",
+        "type_alias",
+        "chunk",
+        "documentation_chunk",
+    )
+
+
+def construct_retrieval_text(
+    language: str,
+    symbol_type: str,
+    symbol_name: str,
+    file_path: str,
+    docstring: Optional[str] = None,
+    parent_symbol: Optional[str] = None,
+) -> str:
+    """Constructs a semantically rich natural language sentence for retrieval."""
+    lang_str = language.capitalize()
+    parent_str = f" in class '{parent_symbol}'" if parent_symbol else ""
+    desc_str = f" Description: {docstring.strip()}" if docstring else ""
+    # Normalise whitespace
+    desc_str = " ".join(desc_str.split())
+    return f"{lang_str} {symbol_type} '{symbol_name}'{parent_str} defined in {file_path}.{desc_str}".strip()
+
+
 def extract_file_imports(tree: ast.AST) -> list[str]:
     """Helper to extract all file-level imports as list of strings."""
     imports = []
@@ -51,13 +84,10 @@ class PythonParser:
         try:
             tree = ast.parse(content)
         except SyntaxError as e:
-            # Let the caller handle AST parsing errors via fallback generic parser
             raise ValueError(f"Python syntax error: {e}") from e
 
         file_imports = extract_file_imports(tree)
         visitor = PythonVisitor(content, repo, file_path, file_imports)
-
-        # Traverse the AST starting from the root module node
         visitor.visit(tree)
         return visitor.symbols
 
@@ -84,11 +114,9 @@ class PythonVisitor:
         elif isinstance(node, (ast.Import, ast.ImportFrom)):
             self.visit_import(node)
         elif isinstance(node, ast.Module):
-            # Traverse root body items
             for child in node.body:
                 self.visit(child, parent_symbol)
         else:
-            # Continue traversal for control flows/blocks to find classes/functions
             for child in ast.iter_child_nodes(node):
                 self.visit(child, parent_symbol)
 
@@ -103,20 +131,43 @@ class PythonVisitor:
         symbol_content = "".join(self.lines[start_line - 1 : end_line])
 
         is_async = isinstance(node, ast.AsyncFunctionDef)
-        symbol_type = (
-            "method"
-            if parent_symbol
-            else ("async_function" if is_async else "function")
-        )
+
+        # Norm function types to function/method
+        norm_type = "method" if parent_symbol else "function"
         symbol_name = f"{parent_symbol}.{node.name}" if parent_symbol else node.name
         docstring = ast.get_docstring(node)
         chunk_id = f"{self.repo}::{self.file_path}::{symbol_name}::{start_line}"
+        symbol_id = f"{self.repo}::{self.file_path}::{symbol_name}"
+
+        # Signature extraction
+        sig_str = ""
+        if node.body:
+            body_start_line = node.body[0].lineno
+            sig_lines = self.lines[node.lineno - 1 : body_start_line - 1]
+            sig_str = "".join(sig_lines).strip()
+            if sig_str.endswith(":"):
+                sig_str = sig_str[:-1].strip()
+        if not sig_str:
+            sig_str = f"def {node.name}(...)"
+
+        # Candidate and export checks
+        candidate = is_embedding_candidate(norm_type)
+        exported = not node.name.startswith("_")
+
+        retrieval_text = construct_retrieval_text(
+            language="python",
+            symbol_type=norm_type,
+            symbol_name=symbol_name,
+            file_path=self.file_path,
+            docstring=docstring,
+            parent_symbol=parent_symbol,
+        )
 
         symbol = CodeSymbol(
             repo=self.repo,
             file=self.file_path,
             language="python",
-            symbol_type=symbol_type,
+            symbol_type=norm_type,
             symbol_name=symbol_name,
             parent_symbol=parent_symbol,
             start_line=start_line,
@@ -129,10 +180,13 @@ class PythonVisitor:
             metadata={
                 "is_async": is_async,
             },
+            exported=exported,
+            embedding_candidate=candidate,
+            signature=sig_str,
+            retrieval_text=retrieval_text,
+            symbol_id=symbol_id,
         )
         self.symbols.append(symbol)
-
-        # Do not recurse inside function body to avoid duplicate nested extraction
 
     def visit_class(self, node: ast.ClassDef) -> None:
         """Visitor for class nodes."""
@@ -143,6 +197,29 @@ class PythonVisitor:
         class_name = node.name
         docstring = ast.get_docstring(node)
         chunk_id = f"{self.repo}::{self.file_path}::{class_name}::{start_line}"
+        symbol_id = f"{self.repo}::{self.file_path}::{class_name}"
+
+        # Signature extraction
+        sig_str = ""
+        if node.body:
+            body_start_line = node.body[0].lineno
+            sig_lines = self.lines[node.lineno - 1 : body_start_line - 1]
+            sig_str = "".join(sig_lines).strip()
+            if sig_str.endswith(":"):
+                sig_str = sig_str[:-1].strip()
+        if not sig_str:
+            sig_str = f"class {class_name}"
+
+        candidate = is_embedding_candidate("class")
+        exported = not class_name.startswith("_")
+
+        retrieval_text = construct_retrieval_text(
+            language="python",
+            symbol_type="class",
+            symbol_name=class_name,
+            file_path=self.file_path,
+            docstring=docstring,
+        )
 
         symbol = CodeSymbol(
             repo=self.repo,
@@ -159,6 +236,11 @@ class PythonVisitor:
             docstring=docstring,
             chunk_id=chunk_id,
             metadata={},
+            exported=exported,
+            embedding_candidate=candidate,
+            signature=sig_str,
+            retrieval_text=retrieval_text,
+            symbol_id=symbol_id,
         )
         self.symbols.append(symbol)
 
@@ -167,7 +249,7 @@ class PythonVisitor:
             self.visit(child, parent_symbol=class_name)
 
     def visit_import(self, node: ast.Import | ast.ImportFrom) -> None:
-        """Visitor for imports to extract them as discrete import symbols."""
+        """Visitor for imports (standalone import symbols)."""
         start_line = node.lineno
         end_line = getattr(node, "end_lineno", start_line)
         symbol_content = "".join(self.lines[start_line - 1 : end_line])
@@ -183,6 +265,7 @@ class PythonVisitor:
 
         symbol_name = ", ".join(imported_names)
         chunk_id = f"{self.repo}::{self.file_path}::import_{start_line}::{start_line}"
+        symbol_id = f"{self.repo}::{self.file_path}::import_{start_line}"
 
         symbol = CodeSymbol(
             repo=self.repo,
@@ -199,5 +282,10 @@ class PythonVisitor:
             docstring=None,
             chunk_id=chunk_id,
             metadata={},
+            exported=False,
+            embedding_candidate=False,
+            signature=symbol_content.strip(),
+            retrieval_text=f"Python import statement in {self.file_path}: {symbol_content.strip()}",
+            symbol_id=symbol_id,
         )
         self.symbols.append(symbol)
