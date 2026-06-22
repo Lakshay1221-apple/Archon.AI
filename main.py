@@ -26,7 +26,7 @@ def main() -> None:
         "--output",
         "-o",
         type=str,
-        default="data/processed/repository_dataset.json",
+        default="data/processed/ast_dataset.json",
         help="Output path for the generated dataset JSON file.",
     )
 
@@ -78,18 +78,18 @@ def main() -> None:
         )
 
         # 5. Print statistics to console
-        print(f"\nRepository: {repo_name}\n")
-        print(f"Files Found: {stats['files_found']}")
-        print(f"Files Processed: {stats['files_processed']}")
-        print(f"Files Skipped: {stats['skipped_files']}")
-        print(f"Binary Files Skipped: {stats['binary_skipped']}")
-        print(f"Large Files Skipped: {stats['large_skipped']}")
-        print(f"Large Files Chunked: {stats['large_chunked']}")
-        print(f"Ignored Directories Checked: {len(stats['ignored_directories'])}")
-        print(
-            f"Languages Detected: {', '.join(stats['languages_detected']) if stats['languages_detected'] else 'None'}"
-        )
-        print(f"Records Generated: {stats['records_generated']}")
+        print(f"\nFiles Parsed: {stats['files_processed']}\n")
+        print(f"Functions: {stats['functions']}")
+        print(f"Classes: {stats['classes']}")
+        print(f"Methods: {stats['methods']}")
+        print(f"Structs: {stats['structs']}")
+        print(f"Enums: {stats['enums']}")
+        print(f"Traits: {stats['traits']}\n")
+        print(f"Imports: {stats['imports']}")
+        print(f"Exports: {stats['exports']}\n")
+        print(f"Fallback Chunks: {stats['fallback_chunks']}")
+        print(f"Parse Failures: {stats['parse_failures']}\n")
+        print(f"Total Symbols: {stats['total_symbols']}")
 
     except Exception as e:
         logger.error(f"Pipeline failed in session {SESSION_ID}: {e}", exc_info=True)

@@ -109,10 +109,9 @@ def mock_repo(tmp_path: Path) -> Path:
     image_file = repo_dir / "src" / "logo.png"
     image_file.write_bytes(b"\x89PNG\r\n\x1a\nimagebytes")
 
-    # 9. Large file for chunking check (e.g. write > 2MB text to trigger chunking if size is lowered)
-    # Write a 2.5MB file and we can configure config override
+    # 9. Large file for chunking check (write 150 lines to trigger line-based chunker)
     large_file = repo_dir / "large_file.txt"
-    large_file.write_text("A" * (2 * 1024 * 1024 + 100), encoding="utf-8")
+    large_file.write_text("Line content here\n" * 150, encoding="utf-8")
 
     return repo_dir
 
@@ -234,8 +233,7 @@ def test_language_detection(mock_repo: Path) -> None:
 
 
 def test_parsing_and_chunking(mock_repo: Path) -> None:
-    """Tests the parsing pipeline, chunking logic, and backward-compatible schema."""
-    # Create configuration where max size is 1MB and chunk size is 1MB to trigger chunking on our 2.5MB file
+    """Tests the parsing pipeline, chunking logic, and symbol schema."""
     custom_config = {
         "max_file_size_mb": 1,
         "chunk_size_mb": 1,
@@ -254,48 +252,50 @@ def test_parsing_and_chunking(mock_repo: Path) -> None:
     records, stats = parse_repository(str(mock_repo), config=custom_config)
 
     # Verify that skipped directories are pruned
-    paths_parsed = [r["path"] for r in records]
-    assert not any("node_modules" in p for p in paths_parsed)
-    assert not any("dist" in p for p in paths_parsed)
-    assert not any("target" in p for p in paths_parsed)
-    assert not any(".venv" in p for p in paths_parsed)
-    assert not any("__pycache__" in p for p in paths_parsed)
-    assert not any(".github/cache" in p for p in paths_parsed)
+    files_parsed = [r["file"] for r in records]
+    assert not any("node_modules" in p for p in files_parsed)
+    assert not any("dist" in p for p in files_parsed)
+    assert not any("target" in p for p in files_parsed)
+    assert not any(".venv" in p for p in files_parsed)
+    assert not any("__pycache__" in p for p in files_parsed)
+    assert not any(".github/cache" in p for p in files_parsed)
 
     # Verify binary extensions are excluded
-    assert not any(p.endswith(".png") for p in paths_parsed)
-    assert not any(p.endswith(".o") for p in paths_parsed)
-    assert not any(p.endswith(".class") for p in paths_parsed)
+    assert not any(p.endswith(".png") for p in files_parsed)
+    assert not any(p.endswith(".o") for p in files_parsed)
+    assert not any(p.endswith(".class") for p in files_parsed)
 
-    # Check for chunking of 2.5MB file
-    chunked_parts = [r for r in records if "large_file.txt" in r["path"]]
-    assert len(chunked_parts) == 3  # 2.5MB chunked into pieces of 1MB (1MB, 1MB, 0.5MB)
-    assert chunked_parts[0]["path"] == "large_file.txt [chunk 1]"
-    assert chunked_parts[0]["chunk_index"] == 0
-    assert chunked_parts[0]["total_chunks"] == 3
+    # Check for chunking of large_file.txt
+    chunked_parts = [r for r in records if "large_file.txt" in r["file"]]
+    assert len(chunked_parts) == 4
+    assert chunked_parts[0]["file"] == "large_file.txt"
+    assert chunked_parts[0]["symbol_type"] == "chunk"
+    assert chunked_parts[0]["symbol_name"] == "chunk_1"
 
-    # Check backward compatibility fields (AST structures, sizes, etc.)
+    # Check CodeSymbol schema fields
     for r in records:
         assert "repo" in r
-        assert "path" in r
+        assert "file" in r
         assert "language" in r
+        assert "symbol_type" in r
+        assert "symbol_name" in r
+        assert "parent_symbol" in r
+        assert "start_line" in r
+        assert "end_line" in r
         assert "content" in r
-        assert "file_name" in r
-        assert "extension" in r
-        assert "size_bytes" in r
         assert "imports" in r
-        assert "functions" in r
-        assert "classes" in r
-        assert "symbols" in r
+        assert "exports" in r
+        assert "docstring" in r
+        assert "chunk_id" in r
+        assert "metadata" in r
         assert isinstance(r["imports"], list)
-        assert isinstance(r["functions"], list)
-        assert isinstance(r["classes"], list)
-        assert isinstance(r["symbols"], list)
+        assert isinstance(r["exports"], list)
+        assert isinstance(r["metadata"], dict)
 
     # Assert statistics accuracy
     assert stats["files_found"] > 0
     assert stats["files_processed"] > 0
-    assert stats["large_chunked"] == 1
+    assert stats["fallback_chunks"] > 0
     assert stats["binary_skipped"] > 0
     assert stats["ignored_directory_skips"] > 0
-    assert stats["records_generated"] == len(records)
+    assert stats["total_symbols"] == len(records)

@@ -50,3 +50,6 @@ git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
   stderr: 'Cloning into '/home/lakshay/Archon AI/data/repositories/Middle-Men'...
 fatal: could not read Username for 'https://github.com': No such device or address
 '
+2026-06-22 14:18:25 | [20260622_141825] | INFO | clone_repo | Directory /home/lakshay/Archon AI/data/repositories/smac-extension already exists. Verifying Git repository status.
+2026-06-22 14:18:25 | [20260622_141825] | INFO | clone_repo | Valid Git repository found. Pulling latest changes from URL: https://github.com/Lakshay1221-apple/smac-extension.git
+2026-06-22 14:18:36 | [20260622_141825] | INFO | clone_repo | Successfully pulled latest changes.
