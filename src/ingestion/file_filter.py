@@ -1,46 +1,82 @@
-"""Module for filtering files during repository ingestion."""
+"""File filtering utilities for Archon AI."""
 
 from pathlib import Path
 
-# Set of supported file extensions (case-insensitive)
-SUPPORTED_EXTENSIONS: set[str] = {
+SUPPORTED_EXTENSIONS = {
     ".py",
-    ".md",
+    ".js",
+    ".jsx",
+    ".ts",
+    ".tsx",
+    ".html",
+    ".css",
+    ".scss",
+    ".json",
     ".yaml",
     ".yml",
-    ".json",
+    ".md",
     ".txt",
+    ".sh",
+    ".sql",
+    ".java",
+    ".cpp",
+    ".c",
+    ".h",
+    ".go",
+    ".rs",
 }
 
-# Set of ignored directory names
-IGNORED_DIRECTORIES: set[str] = {
+IGNORED_DIRECTORIES = {
     ".git",
     ".venv",
+    "venv",
+    "__pycache__",
     "node_modules",
     "dist",
     "build",
-    "__pycache__",
+    ".next",
+    ".cache",
+    "coverage",
+}
+
+BINARY_EXTENSIONS = {
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".gif",
+    ".svg",
+    ".ico",
+    ".webp",
+    ".pdf",
+    ".zip",
+    ".tar",
+    ".gz",
+    ".mp4",
+    ".mp3",
 }
 
 
 def is_supported_file(file_path: Path) -> bool:
-    """Determines whether a file path points to a supported file for indexing.
+    """
+    Determines whether a file should be indexed.
 
     Args:
-        file_path: The pathlib Path object of the file to check.
+        file_path: Path to file.
 
     Returns:
-        True if the file is supported and not in any ignored directory,
-        False otherwise.
+        True if supported, False otherwise.
     """
+
     if not file_path.is_file():
         return False
 
-    # Check if any parent directory is in the ignored list
     for parent in file_path.parents:
         if parent.name in IGNORED_DIRECTORIES:
             return False
 
-    # Check if the file suffix is supported
     suffix = file_path.suffix.lower()
+
+    if suffix in BINARY_EXTENSIONS:
+        return False
+
     return suffix in SUPPORTED_EXTENSIONS
