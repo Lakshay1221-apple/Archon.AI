@@ -1,0 +1,6 @@
+{
+  "log_level": "INFO",
+  "console_logging": true,
+  "file_logging": true,
+  "enable_debug_file_filter": false
+}

@@ -1,0 +1,52 @@
+2026-06-22 11:30:29 | [20260622_113029] | INFO | clone_repo | Directory /home/lakshay/Archon AI/data/repositories/Middle-Men already exists. Verifying Git repository status.
+2026-06-22 11:30:29 | [20260622_113029] | INFO | clone_repo | Valid Git repository found. Pulling latest changes from URL: https://github.com/Lakshay1221-apple/Middle-Men.git
+2026-06-22 11:30:40 | [20260622_113029] | ERROR | clone_repo | Failed to update existing repository via pull: Cmd('git') failed due to: exit code(1)
+  cmdline: git pull -v -- origin
+  stderr: 'fatal: could not read Username for 'https://github.com': No such device or address'. Re-cloning...
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 77, in clone_repository
+    origin.pull()
+    ~~~~~~~~~~~^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/remote.py", line 1130, in pull
+    res = self._get_fetch_info_from_stderr(proc, progress, kill_after_timeout=kill_after_timeout)
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/remote.py", line 902, in _get_fetch_info_from_stderr
+    proc.wait(stderr=stderr_text)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(1)
+  cmdline: git pull -v -- origin
+  stderr: 'fatal: could not read Username for 'https://github.com': No such device or address'
+2026-06-22 11:30:40 | [20260622_113029] | INFO | clone_repo | Cloning repository from https://github.com/Lakshay1221-apple/Middle-Men.git into /home/lakshay/Archon AI/data/repositories/Middle-Men...
+2026-06-22 11:30:50 | [20260622_113029] | ERROR | clone_repo | Failed to clone repository from https://github.com/Lakshay1221-apple/Middle-Men.git: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- https://github.com/Lakshay1221-apple/Middle-Men.git /home/lakshay/Archon AI/data/repositories/Middle-Men
+  stderr: 'Cloning into '/home/lakshay/Archon AI/data/repositories/Middle-Men'...
+fatal: could not read Username for 'https://github.com': No such device or address
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 100, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- https://github.com/Lakshay1221-apple/Middle-Men.git /home/lakshay/Archon AI/data/repositories/Middle-Men
+  stderr: 'Cloning into '/home/lakshay/Archon AI/data/repositories/Middle-Men'...
+fatal: could not read Username for 'https://github.com': No such device or address
+'

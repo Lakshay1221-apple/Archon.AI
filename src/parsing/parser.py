@@ -1,13 +1,13 @@
 """Module for parsing repositories and extracting text content universally."""
 
 import json
-import logging
 from pathlib import Path
 from src.ingestion.file_filter import should_ignore_directory, is_text_file
 from src.parsing.language_detector import detect_language
 from src.utils.config import load_config
+from src.utils.logger import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], dict]:
@@ -27,6 +27,7 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
     """
     repo_path_obj = Path(repo_path)
     if not repo_path_obj.exists():
+        logger.error(f"Failed to parse repository: path '{repo_path}' does not exist.")
         raise FileNotFoundError(f"Repository path does not exist: {repo_path}")
 
     if config is None:
@@ -53,20 +54,25 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
     ignored_directory_skips = 0
     languages_detected: set[str] = set()
 
+    logger.info(f"Parsing repository '{repo_name}' recursively at '{repo_path}'...")
+
     for path in repo_path_obj.rglob("*"):
         if not path.is_file():
             continue
 
         files_found += 1
+        logger.debug(f"File discovered: {path}")
 
         # 1. Ignore common directories
         if should_ignore_directory(path, repo_path_obj, ignored_dirs):
+            logger.debug(f"File skipped: '{path}' matches ignored directories list.")
             ignored_directory_skips += 1
             skipped_files += 1
             continue
 
         # 2. Skip binary files
         if not is_text_file(path, binary_exts):
+            logger.info(f"File skipped: '{path}' is classified as a binary file.")
             binary_skipped += 1
             skipped_files += 1
             continue
@@ -75,13 +81,15 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
         try:
             file_size = path.stat().st_size
         except Exception as e:
-            logger.warning(f"Failed getting size for {path}: {e}")
+            logger.warning(f"File skipped: Failed getting size for '{path}': {e}")
             skipped_files += 1
             continue
 
         # Skip files that are excessively large to prevent memory depletion (> 50MB)
         if file_size > 50 * 1024 * 1024:
-            logger.warning(f"Skipping excessively large file (>50MB): {path}")
+            logger.warning(
+                f"File skipped: '{path}' exceeds absolute safety limit of 50MB (size: {file_size} bytes)."
+            )
             large_skipped += 1
             skipped_files += 1
             continue
@@ -91,15 +99,21 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
             try:
                 content = path.read_text(encoding="utf-8")
             except UnicodeDecodeError:
+                logger.warning(
+                    f"Unicode decoding issue in '{path}'. Retrying read with characters ignored."
+                )
                 content = path.read_text(encoding="utf-8", errors="ignore")
         except Exception as e:
-            logger.warning(f"Failed reading file content for {path}: {e}")
+            logger.error(
+                f"File skipped: Failed to read content of '{path}': {e}", exc_info=True
+            )
             skipped_files += 1
             continue
 
         # 5. Language detection
         lang = detect_language(path, content)
         languages_detected.add(lang)
+        logger.info(f"File accepted: '{path}' (Detected language: {lang})")
 
         # 6. Extract paths
         relative_path = str(path.relative_to(repo_path_obj))
@@ -110,6 +124,10 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
         is_large_file = file_size > max_file_size_bytes
 
         if is_large_file:
+            logger.info(
+                f"File '{relative_path}' size ({file_size} bytes) exceeds limit "
+                f"({max_file_size_bytes} bytes). Splitting into {chunk_size_mb}MB chunks..."
+            )
             large_chunked += 1
             num_chunks = (len(content) + chunk_size_chars - 1) // chunk_size_chars
             for i in range(num_chunks):
@@ -133,6 +151,9 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
                     "symbols": [],
                 }
                 records.append(record)
+                logger.info(
+                    f"Record generated: '{relative_path}' [chunk {i + 1}/{num_chunks}]"
+                )
         else:
             record = {
                 "repo": repo_name,
@@ -149,6 +170,7 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
                 "symbols": [],
             }
             records.append(record)
+            logger.info(f"Record generated: '{relative_path}'")
 
         files_processed += 1
 

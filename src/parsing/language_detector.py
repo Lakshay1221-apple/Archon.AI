@@ -1,11 +1,11 @@
 """Module for automatically detecting the programming or markup language of files."""
 
-import logging
 from pathlib import Path
 from pygments.lexers import get_lexer_for_filename, guess_lexer
 from pygments.util import ClassNotFound
+from src.utils.logger import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 # Complete fallback mapping for major ecosystems
 EXTENSION_TO_LANGUAGE: dict[str, str] = {
@@ -89,42 +89,83 @@ def detect_language(file_path: Path, content: str = "") -> str:
 
     # 1. Custom heuristics for standard files/configs
     if name_lower == "dockerfile" or file_path.suffix.lower() == ".dockerfile":
+        logger.info(
+            f"Language detection: Matched Dockerfile name heuristic for '{file_path.name}'. Language: dockerfile"
+        )
         return "dockerfile"
     if name_lower in ("makefile", "gnumakefile"):
+        logger.info(
+            f"Language detection: Matched Makefile name heuristic for '{file_path.name}'. Language: makefile"
+        )
         return "makefile"
     if name_lower in ("jenkinsfile", "vagrantfile"):
+        logger.info(
+            f"Language detection: Matched groovy name heuristic for '{file_path.name}'. Language: groovy"
+        )
         return "groovy"
     if name_lower == "cmakelists.txt":
+        logger.info(
+            f"Language detection: Matched CMake name heuristic for '{file_path.name}'. Language: cmake"
+        )
         return "cmake"
     if name_lower == "cargo.toml":
+        logger.info(
+            f"Language detection: Matched Cargo.toml name heuristic for '{file_path.name}'. Language: toml"
+        )
         return "toml"
     if name_lower == "package.json":
+        logger.info(
+            f"Language detection: Matched package.json name heuristic for '{file_path.name}'. Language: json"
+        )
         return "json"
     if name_lower == "go.mod":
+        logger.info(
+            f"Language detection: Matched go.mod name heuristic for '{file_path.name}'. Language: go"
+        )
         return "go"
     if name_lower in ("license", "copying", "readme"):
+        logger.info(
+            f"Language detection: Matched standard text metadata name heuristic for '{file_path.name}'. Language: text"
+        )
         return "text"
 
     # 2. Check shebang if content is available
     if content.startswith("#!"):
         first_line = content.split("\n", 1)[0]
         if "python" in first_line:
+            logger.info(
+                f"Language detection: Matched shebang '#!' signature for '{file_path.name}'. Language: python"
+            )
             return "python"
         if "bash" in first_line or "sh" in first_line or "zsh" in first_line:
+            logger.info(
+                f"Language detection: Matched shebang '#!' signature for '{file_path.name}'. Language: bash"
+            )
             return "bash"
         if "node" in first_line:
+            logger.info(
+                f"Language detection: Matched shebang '#!' signature for '{file_path.name}'. Language: javascript"
+            )
             return "javascript"
         if "ruby" in first_line:
+            logger.info(
+                f"Language detection: Matched shebang '#!' signature for '{file_path.name}'. Language: ruby"
+            )
             return "ruby"
         if "perl" in first_line:
+            logger.info(
+                f"Language detection: Matched shebang '#!' signature for '{file_path.name}'. Language: perl"
+            )
             return "perl"
 
     # 3. Use Pygments get_lexer_for_filename
     try:
         lexer = get_lexer_for_filename(file_path.name, code=content)
-        if lexer.aliases:
-            return lexer.aliases[0].lower()
-        return lexer.name.lower()
+        lang = lexer.aliases[0].lower() if lexer.aliases else lexer.name.lower()
+        logger.info(
+            f"Language detection: Pygments matched lexer via filename for '{file_path.name}'. Language: {lang}"
+        )
+        return lang
     except ClassNotFound:
         pass
 
@@ -132,12 +173,18 @@ def detect_language(file_path: Path, content: str = "") -> str:
     if content and len(content.strip()) > 50:
         try:
             lexer = guess_lexer(content)
-            if lexer.aliases:
-                return lexer.aliases[0].lower()
-            return lexer.name.lower()
+            lang = lexer.aliases[0].lower() if lexer.aliases else lexer.name.lower()
+            logger.info(
+                f"Language detection: Pygments guessed lexer via code heuristics for '{file_path.name}'. Language: {lang}"
+            )
+            return lang
         except ClassNotFound:
             pass
 
     # 5. Extension fallback (defaulting to 'text' for any unrecognized text file)
     ext = file_path.suffix.lower()
-    return EXTENSION_TO_LANGUAGE.get(ext, "text")
+    lang = EXTENSION_TO_LANGUAGE.get(ext, "text")
+    logger.info(
+        f"Language detection: Falling back to extension dictionary for '{file_path.name}' (ext: '{ext}'). Language: {lang}"
+    )
+    return lang

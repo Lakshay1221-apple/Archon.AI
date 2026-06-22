@@ -1,10 +1,10 @@
 """File filtering utilities for Archon AI, supporting universal codebases."""
 
-import logging
 from pathlib import Path
 from src.utils.config import load_config
+from src.utils.logger import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 def should_ignore_directory(
@@ -47,15 +47,27 @@ def should_ignore_directory(
             n_parts = len(parts)
             for idx in range(n_parts - n_ignored + 1):
                 if parts[idx : idx + n_ignored] == ignored_parts:
+                    logger.debug(
+                        f"Directory ignore match: File '{file_path}' skipped because "
+                        f"it matched subpath pattern '{ignored}' relative to repo root."
+                    )
                     return True
         else:
             if ignored in parts:
+                logger.debug(
+                    f"Directory ignore match: File '{file_path}' skipped because "
+                    f"parent directory segment '{ignored}' is in ignored list."
+                )
                 return True
 
     # Absolute parent check in case repo_path wasn't provided or file_path is absolute
     if not repo_path:
         for parent in file_path.parents:
             if parent.name in ignored_dirs:
+                logger.debug(
+                    f"Directory ignore match: File '{file_path}' skipped because "
+                    f"absolute parent segment '{parent.name}' is in ignored list."
+                )
                 return True
 
     return False
@@ -76,6 +88,10 @@ def is_text_file(file_path: Path, binary_extensions: list[str]) -> bool:
     """
     suffix = file_path.suffix.lower()
     if suffix in binary_extensions:
+        logger.debug(
+            f"Binary detection: File '{file_path}' skipped because "
+            f"its extension '{suffix}' is in the binary extensions blocklist."
+        )
         return False
 
     try:
@@ -84,10 +100,17 @@ def is_text_file(file_path: Path, binary_extensions: list[str]) -> bool:
             chunk = f.read(8192)
 
         if not chunk:
-            return True  # Empty file is considered text
+            logger.debug(
+                f"File '{file_path}' accepted (empty file is treated as text)."
+            )
+            return True
 
         # Check for null byte
         if b"\x00" in chunk:
+            logger.debug(
+                f"Binary detection: File '{file_path}' skipped because "
+                f"it contains null bytes (indicates binary data)."
+            )
             return False
 
         # Try decoding as UTF-8
@@ -96,7 +119,12 @@ def is_text_file(file_path: Path, binary_extensions: list[str]) -> bool:
         except UnicodeDecodeError:
             # If UTF-8 fails, check density of non-printable control bytes
             control_bytes = sum(1 for b in chunk if b < 32 and b not in (9, 10, 13))
-            if control_bytes / len(chunk) > 0.3:
+            ratio = control_bytes / len(chunk)
+            if ratio > 0.3:
+                logger.debug(
+                    f"Binary detection: File '{file_path}' skipped because "
+                    f"control character ratio {ratio:.2f} exceeds threshold 0.30."
+                )
                 return False
             # Check decode as latin-1 to perform printability checks
             text_chunk = chunk.decode("latin-1", errors="ignore")
@@ -105,12 +133,19 @@ def is_text_file(file_path: Path, binary_extensions: list[str]) -> bool:
         control_chars = sum(
             1 for c in text_chunk if ord(c) < 32 and c not in ("\t", "\n", "\r")
         )
-        if len(text_chunk) > 0 and (control_chars / len(text_chunk)) > 0.3:
+        ratio = control_chars / len(text_chunk)
+        if len(text_chunk) > 0 and ratio > 0.3:
+            logger.debug(
+                f"Binary detection: File '{file_path}' skipped because "
+                f"decoded control character ratio {ratio:.2f} exceeds threshold 0.30."
+            )
             return False
 
         return True
     except Exception as e:
-        logger.debug(f"Error checking text type for {file_path}: {e}")
+        logger.debug(
+            f"Binary detection error: File '{file_path}' skipped due to error: {e}"
+        )
         return False
 
 
@@ -145,4 +180,8 @@ def is_supported_file(
         return False
 
     # 2. Check if text file (handles binary blocklist + null-byte/control heuristics)
-    return is_text_file(file_path, binary_exts)
+    if not is_text_file(file_path, binary_exts):
+        return False
+
+    logger.debug(f"File filter: File '{file_path}' is supported and accepted.")
+    return True

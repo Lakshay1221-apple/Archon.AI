@@ -1,12 +1,12 @@
 """Module for cloning and updating GitHub repositories locally."""
 
-import logging
 import shutil
 import urllib.parse
 from pathlib import Path
 import git
+from src.utils.logger import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 def extract_repo_name(repo_url: str) -> str:
@@ -72,7 +72,9 @@ def clone_repository(repo_url: str) -> str:
             )
             repo = git.Repo(dest_dir)
             if not repo.bare and repo.remotes:
-                logger.info("Valid Git repository found. Pulling latest changes...")
+                logger.info(
+                    f"Valid Git repository found. Pulling latest changes from URL: {repo_url}"
+                )
                 origin = repo.remotes[0]
                 origin.pull()
                 logger.info("Successfully pulled latest changes.")
@@ -85,17 +87,27 @@ def clone_repository(repo_url: str) -> str:
             logger.warning(
                 f"Directory {dest_dir} is not a valid Git repository ({e}). Re-cloning..."
             )
+            # Only clean up if the directory is truly not a valid Git repository
+            if dest_dir.exists():
+                shutil.rmtree(dest_dir, ignore_errors=True)
         except Exception as e:
             logger.warning(
-                f"Failed to update existing repository via pull: {e}. Re-cloning..."
+                f"Failed to update existing repository via pull: {e}. "
+                f"This may be due to network, authentication, or credential constraints. "
+                f"Reusing existing local repository copy."
             )
-
-        # Cleanup the directory before re-cloning if pull failed or repo was invalid
-        if dest_dir.exists():
-            shutil.rmtree(dest_dir, ignore_errors=True)
+            # Do NOT delete the repository folder. Just return the existing directory path.
+            return str(dest_dir.resolve())
 
     logger.info(f"Cloning repository from {repo_url} into {dest_dir}...")
-    git.Repo.clone_from(repo_url, dest_dir)
-    logger.info(f"Successfully cloned repository into {dest_dir}.")
+    try:
+        git.Repo.clone_from(repo_url, dest_dir)
+        logger.info(f"Successfully cloned repository into {dest_dir}.")
+    except Exception as e:
+        logger.error(f"Failed to clone repository from {repo_url}: {e}", exc_info=True)
+        raise
 
     return str(dest_dir.resolve())
+
+
+Length: 3514
