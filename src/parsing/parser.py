@@ -182,6 +182,17 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
 
                 final_file_symbols.append(sym)
 
+            # Run Semantic Enrichment
+            try:
+                from src.enrichment.semantic_builder import SemanticBuilder
+                builder = SemanticBuilder()
+                final_file_symbols = builder.enrich_symbols(final_file_symbols)
+            except Exception as enrichment_err:
+                logger.error(
+                    f"Semantic enrichment failed for file '{relative_path}': {enrichment_err}",
+                    exc_info=True
+                )
+
             # Save processed symbols
             file_had_failure = False
             for sym in final_file_symbols:

@@ -27,6 +27,8 @@ class CodeSymbol:
     signature: Optional[str] = None
     retrieval_text: Optional[str] = None
     symbol_id: str = ""
+    keywords: Optional[list[str]] = None
+    related_symbols: Optional[list[str]] = None
 
     def to_dict(self) -> dict[str, Any]:
         """Converts the CodeSymbol instance to a standard dictionary."""
