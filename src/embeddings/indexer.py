@@ -74,6 +74,7 @@ class Indexer:
                     "symbol_type": record["symbol_type"],
                     "file": record["file"],
                     "language": record["language"],
+                    "retrieval_text": record["retrieval_text"],
 
                     # vector
                     "embedding": embedding.tolist()

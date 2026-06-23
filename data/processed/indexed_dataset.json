@@ -5,6 +5,7 @@
     "symbol_type": "chunk",
     "file": "tsconfig.app.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_1' defined in tsconfig.app.json.",
     "embedding": [
       -0.01493742223829031,
       -0.03004179708659649,
@@ -398,6 +399,7 @@
     "symbol_type": "chunk",
     "file": "package.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_1' defined in package.json.",
     "embedding": [
       -0.023126669228076935,
       -0.026578713208436966,
@@ -791,6 +793,7 @@
     "symbol_type": "chunk",
     "file": "index.html",
     "language": "html",
+    "retrieval_text": "Html text chunk 'chunk_1' defined in index.html.",
     "embedding": [
       -0.0017023198306560516,
       -0.07711609452962875,
@@ -1184,6 +1187,7 @@
     "symbol_type": "chunk",
     "file": ".gitignore",
     "language": "gas",
+    "retrieval_text": "Gas text chunk 'chunk_1' defined in .gitignore.",
     "embedding": [
       -0.017188576981425285,
       -0.0623127818107605,
@@ -1577,6 +1581,7 @@
     "symbol_type": "chunk",
     "file": "tsconfig.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_1' defined in tsconfig.json.",
     "embedding": [
       -0.01483127847313881,
       -0.03288675844669342,
@@ -1970,6 +1975,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_1' defined in README.md.",
     "embedding": [
       -0.04887080192565918,
       -0.05326464772224426,
@@ -2363,6 +2369,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_2' defined in README.md.",
     "embedding": [
       -0.06253700703382492,
       -0.04623488336801529,
@@ -2756,6 +2763,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_3' defined in README.md.",
     "embedding": [
       -0.049217551946640015,
       -0.044658076018095016,
@@ -3149,6 +3157,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_4' defined in README.md.",
     "embedding": [
       -0.05170596018433571,
       -0.03014935366809368,
@@ -3542,6 +3551,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_5' defined in README.md.",
     "embedding": [
       -0.060623545199632645,
       -0.05003427714109421,
@@ -3935,6 +3945,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_6' defined in README.md.",
     "embedding": [
       -0.022904520854353905,
       -0.03922984376549721,
@@ -4328,6 +4339,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_7' defined in README.md.",
     "embedding": [
       -0.06166061758995056,
       -0.03847166895866394,
@@ -4721,6 +4733,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_8' defined in README.md.",
     "embedding": [
       -0.05993475764989853,
       -0.06622744351625443,
@@ -5114,6 +5127,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_9' defined in README.md.",
     "embedding": [
       -0.06879134476184845,
       -0.03554213419556618,
@@ -5507,6 +5521,7 @@
     "symbol_type": "chunk",
     "file": "README.md",
     "language": "markdown",
+    "retrieval_text": "Markdown text chunk 'chunk_10' defined in README.md.",
     "embedding": [
       -0.0627102255821228,
       -0.02749606780707836,
@@ -5900,6 +5915,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_1' defined in package-lock.json.",
     "embedding": [
       -0.02648134157061577,
       -0.04488348588347435,
@@ -6293,6 +6309,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_2' defined in package-lock.json.",
     "embedding": [
       -0.03778693452477455,
       -0.04135483130812645,
@@ -6686,6 +6703,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_3' defined in package-lock.json.",
     "embedding": [
       -0.026546625420451164,
       -0.042946554720401764,
@@ -7079,6 +7097,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_4' defined in package-lock.json.",
     "embedding": [
       -0.030650252476334572,
       -0.027049709111452103,
@@ -7472,6 +7491,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_5' defined in package-lock.json.",
     "embedding": [
       -0.04621310532093048,
       -0.049606673419475555,
@@ -7865,6 +7885,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_6' defined in package-lock.json.",
     "embedding": [
       -0.00547521747648716,
       -0.03156617283821106,
@@ -8258,6 +8279,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_7' defined in package-lock.json.",
     "embedding": [
       -0.044359833002090454,
       -0.028563212603330612,
@@ -8651,6 +8673,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_8' defined in package-lock.json.",
     "embedding": [
       -0.03848714381456375,
       -0.05775079131126404,
@@ -9044,6 +9067,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_9' defined in package-lock.json.",
     "embedding": [
       -0.04862169548869133,
       -0.02834431454539299,
@@ -9437,6 +9461,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_10' defined in package-lock.json.",
     "embedding": [
       -0.04632924124598503,
       -0.008980884216725826,
@@ -9830,6 +9855,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_11' defined in package-lock.json.",
     "embedding": [
       -0.03661232814192772,
       -0.03877266123890877,
@@ -10223,6 +10249,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_12' defined in package-lock.json.",
     "embedding": [
       -0.0254621971398592,
       -0.025143366307020187,
@@ -10616,6 +10643,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_13' defined in package-lock.json.",
     "embedding": [
       -0.019451798871159554,
       -0.03727942705154419,
@@ -11009,6 +11037,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_14' defined in package-lock.json.",
     "embedding": [
       -0.05218891799449921,
       -0.04811060428619385,
@@ -11402,6 +11431,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_15' defined in package-lock.json.",
     "embedding": [
       -0.06170671433210373,
       -0.0411040298640728,
@@ -11795,6 +11825,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_16' defined in package-lock.json.",
     "embedding": [
       -0.030314311385154724,
       -0.013180620968341827,
@@ -12188,6 +12219,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_17' defined in package-lock.json.",
     "embedding": [
       -0.035895347595214844,
       -0.014453026466071606,
@@ -12581,6 +12613,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_18' defined in package-lock.json.",
     "embedding": [
       -0.02485789731144905,
       -0.025155656039714813,
@@ -12974,6 +13007,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_19' defined in package-lock.json.",
     "embedding": [
       -0.0321137011051178,
       -0.011278804391622543,
@@ -13367,6 +13401,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_20' defined in package-lock.json.",
     "embedding": [
       -0.025461044162511826,
       -0.013152029365301132,
@@ -13760,6 +13795,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_21' defined in package-lock.json.",
     "embedding": [
       -0.06629376113414764,
       -0.019176272675395012,
@@ -14153,6 +14189,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_22' defined in package-lock.json.",
     "embedding": [
       -0.0414464995265007,
       -0.03777647763490677,
@@ -14546,6 +14583,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_23' defined in package-lock.json.",
     "embedding": [
       -0.024574577808380127,
       -0.047982703894376755,
@@ -14939,6 +14977,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_24' defined in package-lock.json.",
     "embedding": [
       -0.03144076466560364,
       -0.02629532851278782,
@@ -15332,6 +15371,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_25' defined in package-lock.json.",
     "embedding": [
       -0.031529977917671204,
       -0.014846883714199066,
@@ -15725,6 +15765,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_26' defined in package-lock.json.",
     "embedding": [
       -0.016575131565332413,
       -0.02642524614930153,
@@ -16118,6 +16159,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_27' defined in package-lock.json.",
     "embedding": [
       -0.0421258918941021,
       -0.014069595374166965,
@@ -16511,6 +16553,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_28' defined in package-lock.json.",
     "embedding": [
       -0.03757837042212486,
       -0.005336555186659098,
@@ -16904,6 +16947,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_29' defined in package-lock.json.",
     "embedding": [
       -0.0229298435151577,
       -0.020215703174471855,
@@ -17297,6 +17341,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_30' defined in package-lock.json.",
     "embedding": [
       -0.03793066367506981,
       -0.039640236645936966,
@@ -17690,6 +17735,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_31' defined in package-lock.json.",
     "embedding": [
       -0.030118674039840698,
       -0.019615542143583298,
@@ -18083,6 +18129,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_32' defined in package-lock.json.",
     "embedding": [
       -0.04248177632689476,
       -0.028282374143600464,
@@ -18476,6 +18523,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_33' defined in package-lock.json.",
     "embedding": [
       -0.04670726880431175,
       -0.06350226700305939,
@@ -18869,6 +18917,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_34' defined in package-lock.json.",
     "embedding": [
       -0.03527168557047844,
       -0.031362004578113556,
@@ -19262,6 +19311,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_35' defined in package-lock.json.",
     "embedding": [
       -0.03205772861838341,
       -0.00494220107793808,
@@ -19655,6 +19705,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_36' defined in package-lock.json.",
     "embedding": [
       -0.03001309186220169,
       -0.038699667900800705,
@@ -20048,6 +20099,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_37' defined in package-lock.json.",
     "embedding": [
       -0.043020471930503845,
       -0.04189525544643402,
@@ -20441,6 +20493,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_38' defined in package-lock.json.",
     "embedding": [
       -0.026960350573062897,
       -0.02893756702542305,
@@ -20834,6 +20887,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_39' defined in package-lock.json.",
     "embedding": [
       -0.04129048064351082,
       -0.03443223237991333,
@@ -21227,6 +21281,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_40' defined in package-lock.json.",
     "embedding": [
       -0.03171227499842644,
       -0.016967514529824257,
@@ -21620,6 +21675,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_41' defined in package-lock.json.",
     "embedding": [
       -0.02883150987327099,
       -0.026171401143074036,
@@ -22013,6 +22069,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_42' defined in package-lock.json.",
     "embedding": [
       -0.05403311550617218,
       -0.02273407205939293,
@@ -22406,6 +22463,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_43' defined in package-lock.json.",
     "embedding": [
       -0.0607820600271225,
       -0.04167031869292259,
@@ -22799,6 +22857,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_44' defined in package-lock.json.",
     "embedding": [
       -0.05638907104730606,
       -0.022281181067228317,
@@ -23192,6 +23251,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_45' defined in package-lock.json.",
     "embedding": [
       -0.045650601387023926,
       -0.037371668964624405,
@@ -23585,6 +23645,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_46' defined in package-lock.json.",
     "embedding": [
       -0.05248326435685158,
       -0.03982007876038551,
@@ -23978,6 +24039,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_47' defined in package-lock.json.",
     "embedding": [
       -0.050329290330410004,
       -0.051322612911462784,
@@ -24371,6 +24433,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_48' defined in package-lock.json.",
     "embedding": [
       -0.04230896010994911,
       -0.01329539343714714,
@@ -24764,6 +24827,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_49' defined in package-lock.json.",
     "embedding": [
       -0.06490080058574677,
       -0.02948118932545185,
@@ -25157,6 +25221,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_50' defined in package-lock.json.",
     "embedding": [
       -0.056760676205158234,
       -0.04185186326503754,
@@ -25550,6 +25615,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_51' defined in package-lock.json.",
     "embedding": [
       -0.04257339984178543,
       -0.03988437354564667,
@@ -25943,6 +26009,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_52' defined in package-lock.json.",
     "embedding": [
       -0.04536106809973717,
       -0.020122626796364784,
@@ -26336,6 +26403,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_53' defined in package-lock.json.",
     "embedding": [
       -0.06489075720310211,
       -0.04499029740691185,
@@ -26729,6 +26797,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_54' defined in package-lock.json.",
     "embedding": [
       -0.02771880105137825,
       -0.02942240983247757,
@@ -27122,6 +27191,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_55' defined in package-lock.json.",
     "embedding": [
       -0.071823351085186,
       -0.0450904555618763,
@@ -27515,6 +27585,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_56' defined in package-lock.json.",
     "embedding": [
       -0.04124869778752327,
       -0.056235797703266144,
@@ -27908,6 +27979,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_57' defined in package-lock.json.",
     "embedding": [
       -0.0581086166203022,
       -0.041886668652296066,
@@ -28301,6 +28373,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_58' defined in package-lock.json.",
     "embedding": [
       -0.07519102096557617,
       -0.01294300053268671,
@@ -28694,6 +28767,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_59' defined in package-lock.json.",
     "embedding": [
       -0.09026472270488739,
       -0.029557038098573685,
@@ -29087,6 +29161,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_60' defined in package-lock.json.",
     "embedding": [
       -0.04835188016295433,
       -0.02927720546722412,
@@ -29480,6 +29555,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_61' defined in package-lock.json.",
     "embedding": [
       -0.021328113973140717,
       -0.03120547905564308,
@@ -29873,6 +29949,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_62' defined in package-lock.json.",
     "embedding": [
       -0.045477245002985,
       -0.03018464520573616,
@@ -30266,6 +30343,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_63' defined in package-lock.json.",
     "embedding": [
       -0.04671069234609604,
       -0.024735495448112488,
@@ -30659,6 +30737,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_64' defined in package-lock.json.",
     "embedding": [
       -0.05048162490129471,
       -0.018552519381046295,
@@ -31052,6 +31131,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_65' defined in package-lock.json.",
     "embedding": [
       -0.052304595708847046,
       -0.01898248679935932,
@@ -31445,6 +31525,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_66' defined in package-lock.json.",
     "embedding": [
       -0.03559867665171623,
       -0.024120217189192772,
@@ -31838,6 +31919,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_67' defined in package-lock.json.",
     "embedding": [
       -0.04007337614893913,
       -0.01739659532904625,
@@ -32231,6 +32313,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_68' defined in package-lock.json.",
     "embedding": [
       -0.036305636167526245,
       -0.04352555051445961,
@@ -32624,6 +32707,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_69' defined in package-lock.json.",
     "embedding": [
       -0.04270956665277481,
       -0.023471064865589142,
@@ -33017,6 +33101,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_70' defined in package-lock.json.",
     "embedding": [
       -0.03782415762543678,
       -0.010196208022534847,
@@ -33410,6 +33495,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_71' defined in package-lock.json.",
     "embedding": [
       -0.06263038516044617,
       -0.04973197355866432,
@@ -33803,6 +33889,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_72' defined in package-lock.json.",
     "embedding": [
       -0.045020412653684616,
       -0.006285457871854305,
@@ -34196,6 +34283,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_73' defined in package-lock.json.",
     "embedding": [
       -0.03259546309709549,
       -0.01488768495619297,
@@ -34589,6 +34677,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_74' defined in package-lock.json.",
     "embedding": [
       -0.04660032317042351,
       -0.016830865293741226,
@@ -34982,6 +35071,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_75' defined in package-lock.json.",
     "embedding": [
       -0.05459848418831825,
       -0.006101309787482023,
@@ -35375,6 +35465,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_76' defined in package-lock.json.",
     "embedding": [
       -0.037721484899520874,
       -0.026174349710345268,
@@ -35768,6 +35859,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_77' defined in package-lock.json.",
     "embedding": [
       -0.04945427179336548,
       -0.022207140922546387,
@@ -36161,6 +36253,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_78' defined in package-lock.json.",
     "embedding": [
       -0.04287770390510559,
       -0.03422054648399353,
@@ -36554,6 +36647,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_79' defined in package-lock.json.",
     "embedding": [
       -0.03241575136780739,
       -0.0070718200877308846,
@@ -36947,6 +37041,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_80' defined in package-lock.json.",
     "embedding": [
       -0.037204764783382416,
       0.006741408258676529,
@@ -37340,6 +37435,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_81' defined in package-lock.json.",
     "embedding": [
       -0.03302336856722832,
       -0.021226409822702408,
@@ -37733,6 +37829,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_82' defined in package-lock.json.",
     "embedding": [
       -0.06343753635883331,
       -0.03248497098684311,
@@ -38126,6 +38223,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_83' defined in package-lock.json.",
     "embedding": [
       -0.04613042622804642,
       -0.024857256561517715,
@@ -38519,6 +38617,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_84' defined in package-lock.json.",
     "embedding": [
       -0.02806738018989563,
       -0.040889937430620193,
@@ -38912,6 +39011,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_85' defined in package-lock.json.",
     "embedding": [
       -0.04574429988861084,
       -0.025084100663661957,
@@ -39305,6 +39405,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_86' defined in package-lock.json.",
     "embedding": [
       -0.03734368830919266,
       -0.005437213461846113,
@@ -39698,6 +39799,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_87' defined in package-lock.json.",
     "embedding": [
       -0.0527496375143528,
       -0.012139811180531979,
@@ -40091,6 +40193,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_88' defined in package-lock.json.",
     "embedding": [
       -0.035384856164455414,
       -0.04728761315345764,
@@ -40484,6 +40587,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_89' defined in package-lock.json.",
     "embedding": [
       -0.03979070857167244,
       -0.018206125125288963,
@@ -40877,6 +40981,7 @@
     "symbol_type": "chunk",
     "file": "package-lock.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_90' defined in package-lock.json.",
     "embedding": [
       -0.051711153239011765,
       -0.008517823182046413,
@@ -41270,6 +41375,7 @@
     "symbol_type": "chunk",
     "file": "start-smac.sh",
     "language": "bash",
+    "retrieval_text": "Bash text chunk 'chunk_1' defined in start-smac.sh.",
     "embedding": [
       -0.03606633096933365,
       -0.03547602891921997,
@@ -41663,6 +41769,7 @@
     "symbol_type": "chunk",
     "file": "tsconfig.node.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_1' defined in tsconfig.node.json.",
     "embedding": [
       -0.008615701459348202,
       -0.030940916389226913,
@@ -42056,6 +42163,7 @@
     "symbol_type": "chunk",
     "file": "manifest.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_1' defined in manifest.json.",
     "embedding": [
       -0.019148722290992737,
       -0.017689432948827744,
@@ -42449,6 +42557,7 @@
     "symbol_type": "chunk",
     "file": "manifest.json",
     "language": "json",
+    "retrieval_text": "Json text chunk 'chunk_2' defined in manifest.json.",
     "embedding": [
       -0.03035551682114601,
       -0.013869596645236015,
@@ -42842,6 +42951,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'App' defined in src/App.tsx.",
     "embedding": [
       -0.01773959770798683,
       -0.02201087400317192,
@@ -43235,6 +43345,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'resolveContextMode' defined in src/App.tsx.",
     "embedding": [
       -0.008969818241894245,
       0.03301602229475975,
@@ -43628,6 +43739,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'validateConfiguration' defined in src/App.tsx.",
     "embedding": [
       -0.04001995548605919,
       -0.016065144911408424,
@@ -44021,6 +44133,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'firstError' defined in src/App.tsx.",
     "embedding": [
       -0.0504707470536232,
       -0.021149754524230957,
@@ -44414,6 +44527,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'getActiveTab' defined in src/App.tsx.",
     "embedding": [
       -0.04655475169420242,
       0.003247032640501857,
@@ -44807,6 +44921,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'getStorage' defined in src/App.tsx.",
     "embedding": [
       -0.05498111993074417,
       -0.004893657751381397,
@@ -45200,6 +45315,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'setStorage' defined in src/App.tsx.",
     "embedding": [
       -0.030238265171647072,
       0.0030341034289449453,
@@ -45593,6 +45709,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'sendRuntimeMessage' defined in src/App.tsx.",
     "embedding": [
       -0.023030823096632957,
       0.02602071687579155,
@@ -45986,6 +46103,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'asString' defined in src/App.tsx.",
     "embedding": [
       -0.013330250047147274,
       -0.04072614759206772,
@@ -46379,6 +46497,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'extractErrorMessage' defined in src/App.tsx.",
     "embedding": [
       -0.06046687439084053,
       0.023539027199149132,
@@ -46772,6 +46891,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'inputStyle' defined in src/App.tsx.",
     "embedding": [
       -0.009319036267697811,
       0.010517347604036331,
@@ -47165,6 +47285,7 @@
     "symbol_type": "function",
     "file": "src/App.tsx",
     "language": "tsx",
+    "retrieval_text": "Tsx function 'bannerStyle' defined in src/App.tsx.",
     "embedding": [
       -0.015919454395771027,
       0.02560799941420555,
@@ -47558,6 +47679,7 @@
     "symbol_type": "chunk",
     "file": "src/index.css",
     "language": "css",
+    "retrieval_text": "Css text chunk 'chunk_1' defined in src/index.css.",
     "embedding": [
       0.015781044960021973,
       -0.06136775016784668,
@@ -47951,6 +48073,7 @@
     "symbol_type": "chunk",
     "file": "src/App.css",
     "language": "css",
+    "retrieval_text": "Css text chunk 'chunk_1' defined in src/App.css.",
     "embedding": [
       0.015427890233695507,
       -0.05220327526330948,
@@ -48344,6 +48467,7 @@
     "symbol_type": "function",
     "file": "src/background/crypto.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'getDerivedKey' defined in src/background/crypto.js.Description: // src/background/crypto.js",
     "embedding": [
       -0.04474614933133125,
       -0.035539254546165466,
@@ -48737,6 +48861,7 @@
     "symbol_type": "function",
     "file": "src/background/crypto.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'encryptKey' defined in src/background/crypto.js.",
     "embedding": [
       -0.02238730527460575,
       -0.03138556331396103,
@@ -49130,6 +49255,7 @@
     "symbol_type": "function",
     "file": "src/background/crypto.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'decryptKey' defined in src/background/crypto.js.",
     "embedding": [
       -0.023969514295458794,
       -0.030466657131910324,
@@ -49523,6 +49649,7 @@
     "symbol_type": "function",
     "file": "src/background/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'cleanResponse' defined in src/background/index.js.",
     "embedding": [
       -0.05474424362182617,
       0.00923820398747921,
@@ -49916,6 +50043,7 @@
     "symbol_type": "function",
     "file": "src/background/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'buildPrompt' defined in src/background/index.js.",
     "embedding": [
       -0.048193033784627914,
       0.05326879397034645,
@@ -50309,6 +50437,7 @@
     "symbol_type": "function",
     "file": "src/background/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'handleGeneration' defined in src/background/index.js.",
     "embedding": [
       -0.018157312646508217,
       0.018193503841757774,
@@ -50702,6 +50831,7 @@
     "symbol_type": "function",
     "file": "src/background/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'createRuntimeError' defined in src/background/index.js.",
     "embedding": [
       -0.05570266395807266,
       -0.030080648139119148,
@@ -51095,6 +51225,7 @@
     "symbol_type": "function",
     "file": "src/background/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'formatRuntimeError' defined in src/background/index.js.",
     "embedding": [
       -0.04992242157459259,
       -0.02966761589050293,
@@ -51488,6 +51619,7 @@
     "symbol_type": "function",
     "file": "src/background/screenshot.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'captureAndCrop' defined in src/background/screenshot.js.Description: // src/background/screenshot.js",
     "embedding": [
       -0.0444849468767643,
       0.0006956281140446663,
@@ -51881,6 +52013,7 @@
     "symbol_type": "function",
     "file": "src/background/screenshot.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'extractBase64' defined in src/background/screenshot.js.",
     "embedding": [
       -0.07913502305746078,
       0.0029287603683769703,
@@ -52274,6 +52407,7 @@
     "symbol_type": "function",
     "file": "src/content/modal.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'showIntentModal' defined in src/content/modal.js.",
     "embedding": [
       0.016474485397338867,
       0.0036054872907698154,
@@ -52667,6 +52801,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'isChromeContextValid' defined in src/content/index.js.Description: // Guard: returns false if the extension context was invalidated (tab open during reload)",
     "embedding": [
       -0.06996268033981323,
       -0.029614506289362907,
@@ -53060,6 +53195,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'loadSettings' defined in src/content/index.js.",
     "embedding": [
       -0.032476335763931274,
       -0.019365156069397926,
@@ -53453,6 +53589,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'detectMode' defined in src/content/index.js.",
     "embedding": [
       -0.05732375755906105,
       0.016632651910185814,
@@ -53846,6 +53983,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'onUrlChange' defined in src/content/index.js.",
     "embedding": [
       -0.04071129485964775,
       -0.008547687903046608,
@@ -54239,6 +54377,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'removeButtons' defined in src/content/index.js.",
     "embedding": [
       -0.02568342350423336,
       -0.0023560491390526295,
@@ -54632,6 +54771,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'debounce' defined in src/content/index.js.",
     "embedding": [
       -0.0753212422132492,
       -0.01732170209288597,
@@ -55025,6 +55165,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'startObserver' defined in src/content/index.js.",
     "embedding": [
       -0.036086808890104294,
       -0.005085940007120371,
@@ -55418,6 +55559,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'stopObserver' defined in src/content/index.js.",
     "embedding": [
       -0.024834567680954933,
       0.00014465884305536747,
@@ -55811,6 +55953,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'updateFloatingButton' defined in src/content/index.js.",
     "embedding": [
       -0.03223176300525665,
       -0.04092499986290932,
@@ -56204,6 +56347,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'history.pushState' defined in src/content/index.js.",
     "embedding": [
       -0.05323655158281326,
       -0.018097398802638054,
@@ -56597,6 +56741,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'injectButtons' defined in src/content/index.js.",
     "embedding": [
       -0.022410886362195015,
       -0.017961841076612473,
@@ -56990,6 +57135,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'createSmacButton' defined in src/content/index.js.",
     "embedding": [
       -0.042421091347932816,
       -0.0028200834058225155,
@@ -57383,6 +57529,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'handleBtnClick' defined in src/content/index.js.",
     "embedding": [
       -0.03158638998866081,
       -0.004672212526202202,
@@ -57776,6 +57923,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'findElement' defined in src/content/index.js.",
     "embedding": [
       -0.03297942876815796,
       -0.02956172078847885,
@@ -58169,6 +58317,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'injectPostButtons' defined in src/content/index.js.",
     "embedding": [
       -0.043081123381853104,
       -0.002121243393048644,
@@ -58562,6 +58711,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'injectToastContainer' defined in src/content/index.js.",
     "embedding": [
       0.014248662628233433,
       -0.023084228858351707,
@@ -58955,6 +59105,7 @@
     "symbol_type": "function",
     "file": "src/content/index.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'showToast' defined in src/content/index.js.",
     "embedding": [
       -0.004624745808541775,
       -0.012178278528153896,
@@ -59348,6 +59499,7 @@
     "symbol_type": "function",
     "file": "src/utils/injected.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'findEditor' defined in src/utils/injected.js.Description: // Helpers",
     "embedding": [
       -0.05849963054060936,
       -0.032827794551849365,
@@ -59741,6 +59893,7 @@
     "symbol_type": "function",
     "file": "src/utils/injected.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'getReactFiber' defined in src/utils/injected.js.",
     "embedding": [
       0.003830460598692298,
       -0.004201493691653013,
@@ -60134,6 +60287,7 @@
     "symbol_type": "function",
     "file": "src/utils/injected.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'getHandlers' defined in src/utils/injected.js.",
     "embedding": [
       -0.025225725024938583,
       -0.025952860713005066,
@@ -60527,6 +60681,7 @@
     "symbol_type": "function",
     "file": "src/utils/injected.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'preventDefault' defined in src/utils/injected.js.",
     "embedding": [
       -0.01684221811592579,
       -0.011083514429628849,
@@ -60920,6 +61075,7 @@
     "symbol_type": "function",
     "file": "src/utils/injected.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'stopPropagation' defined in src/utils/injected.js.",
     "embedding": [
       -0.0060009462758898735,
       -0.026654604822397232,
@@ -61313,6 +61469,7 @@
     "symbol_type": "function",
     "file": "src/utils/injected.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'persist' defined in src/utils/injected.js.",
     "embedding": [
       -0.025123711675405502,
       -0.005911281798034906,
@@ -61706,6 +61863,7 @@
     "symbol_type": "function",
     "file": "src/utils/injected.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'isDefaultPrevented' defined in src/utils/injected.js.",
     "embedding": [
       -0.010576453991234303,
       -0.044094525277614594,
@@ -62099,6 +62257,7 @@
     "symbol_type": "function",
     "file": "src/utils/injected.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'isPropagationStopped' defined in src/utils/injected.js.",
     "embedding": [
       -0.04058285057544708,
       -0.04674909636378288,
@@ -62492,6 +62651,7 @@
     "symbol_type": "function",
     "file": "src/utils/dom.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'detectPlatform' defined in src/utils/dom.js.Description: // Detect current platform from hostname",
     "embedding": [
       -0.021802859380841255,
       -0.021689951419830322,
@@ -62885,6 +63045,7 @@
     "symbol_type": "function",
     "file": "src/utils/dom.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'detectPlatformFromHostname' defined in src/utils/dom.js.",
     "embedding": [
       -4.74166008643806e-05,
       -0.013342078775167465,
@@ -63278,6 +63439,7 @@
     "symbol_type": "function",
     "file": "src/utils/dom.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'detectModeFromUrl' defined in src/utils/dom.js.",
     "embedding": [
       -0.05645182728767395,
       -0.0045624724589288235,
@@ -63671,6 +63833,7 @@
     "symbol_type": "function",
     "file": "src/content/modes/message.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'handleMessageClick' defined in src/content/modes/message.js.",
     "embedding": [
       0.019917577505111694,
       0.030136892572045326,
@@ -64064,6 +64227,7 @@
     "symbol_type": "function",
     "file": "src/content/modes/message.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'detectSender' defined in src/content/modes/message.js.",
     "embedding": [
       -0.031040703877806664,
       -0.020796645432710648,
@@ -64457,6 +64621,7 @@
     "symbol_type": "function",
     "file": "src/content/modes/profile.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'handleProfileClick' defined in src/content/modes/profile.js.",
     "embedding": [
       -0.02674035169184208,
       0.0037748699542135,
@@ -64850,6 +65015,7 @@
     "symbol_type": "function",
     "file": "src/content/modes/profile.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'readText' defined in src/content/modes/profile.js.",
     "embedding": [
       0.003094346961006522,
       0.014171642251312733,
@@ -65243,6 +65409,7 @@
     "symbol_type": "function",
     "file": "src/content/modes/post.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'handlePostClick' defined in src/content/modes/post.js.",
     "embedding": [
       -0.03440903127193451,
       0.015969842672348022,
@@ -65636,6 +65803,7 @@
     "symbol_type": "function",
     "file": "src/content/modes/post.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'readFirstText' defined in src/content/modes/post.js.",
     "embedding": [
       -0.036042775958776474,
       -0.0014623173046857119,
@@ -66029,6 +66197,7 @@
     "symbol_type": "function",
     "file": "src/background/backends/remote.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'runRemote' defined in src/background/backends/remote.js.Description: // src/background/backends/remote.js",
     "embedding": [
       -0.05284031108021736,
       -0.034110065549612045,
@@ -66422,6 +66591,7 @@
     "symbol_type": "function",
     "file": "src/background/backends/remote.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'mapRemoteError' defined in src/background/backends/remote.js.",
     "embedding": [
       -0.034616053104400635,
       -0.0669415220618248,
@@ -66815,6 +66985,7 @@
     "symbol_type": "function",
     "file": "src/background/backends/remote.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'createBackendError' defined in src/background/backends/remote.js.",
     "embedding": [
       -0.05877652019262314,
       -0.033463042229413986,
@@ -67208,6 +67379,7 @@
     "symbol_type": "function",
     "file": "src/background/backends/ollama.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'runOllama' defined in src/background/backends/ollama.js.Description: // src/background/backends/ollama.js",
     "embedding": [
       -0.014691267162561417,
       0.00424713222309947,
@@ -67601,6 +67773,7 @@
     "symbol_type": "function",
     "file": "src/background/backends/ollama.js",
     "language": "javascript",
+    "retrieval_text": "Javascript function 'createBackendError' defined in src/background/backends/ollama.js.",
     "embedding": [
       -0.05918240174651146,
       -0.03820788487792015,

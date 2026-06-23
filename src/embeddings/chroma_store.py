@@ -51,17 +51,18 @@ class ChromaStore:
         for record in records:
             ids.append(record["symbol_id"])
             embeddings.append(record['embedding'])
-            documents.append(record["symbol_name"])
+            documents.append(record.get("retrieval_text", record["symbol_name"]))
             metadatas.append(
                 {
                     "symbol_name": record["symbol_name"],
                     "symbol_type": record["symbol_type"],
                     "file": record["file"],
                     "language": record["language"],
+                    "retrieval_text": record.get("retrieval_text", ""),
                 }
             )
     
-        self.collection.add(
+        self.collection.upsert(
             ids=ids,
             embeddings=embeddings,
             metadatas=metadatas,
