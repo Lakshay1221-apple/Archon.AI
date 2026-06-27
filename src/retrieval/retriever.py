@@ -43,7 +43,7 @@ class Retriever:
     def search(
         self,
         query: str,
-        top_k: int = 5,
+        top_k: int = 20,
     ) -> list[dict]:
         """
         Search ChromaDB using semantic similarity.
@@ -87,6 +87,21 @@ class Retriever:
                         "",
                     ),
                     "distance": float(distance),
+
+                    "related_symbols": metadata.get(
+                        "related_symbols",
+                        [],
+                    ),
+
+                    "keywords": metadata.get(
+                        "keywords",
+                        [],
+                    ), 
+
+                    "signature": metadata.get(
+                        "signature",
+                        "",
+                    ),  
                 }
             )
 
@@ -105,8 +120,8 @@ if __name__ == "__main__":
 
     for rank, result in enumerate(results, start=1):
         print(f"{rank}. {result['symbol_name']} ({result['symbol_type']}) | Distance: {result['distance']:.4f}")
-        print(f"   File: {result['file']}")        
-        print(f"   Language: {result['language']}")        
-        print(f"   Context:")
+        print(f"File: {result['file']}")        
+        print(f"Language: {result['language']}")        
+        print(f"Context:")
         print(result["retrieval_text"])
         print()
