@@ -45,6 +45,7 @@ DEFAULT_IGNORED_DIRECTORIES: set[str] = {
     "build",
     "target",
     "coverage",
+    "htmlcov",
     ".next",
     ".nuxt",
     ".cache",
@@ -53,6 +54,14 @@ DEFAULT_IGNORED_DIRECTORIES: set[str] = {
     "__pycache__",
     ".idea",
     ".vscode",
+    "logs",
+    "*.log",
+    "*.pyc",
+    "*.lock",
+    "*lock.json",
+    "*lock.yaml",
+    ".pytest_cache",
+    ".mypy_cache",
 }
 
 DEFAULT_MAX_FILE_SIZE_MB = 5

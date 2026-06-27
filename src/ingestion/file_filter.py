@@ -1,34 +1,58 @@
 """File filtering utilities for Archon AI, supporting universal codebases."""
 
+import fnmatch
 from pathlib import Path
+from typing import Optional
 from src.utils.config import load_config
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
 
-def should_ignore_directory(
+def get_ignore_pattern(
     file_path: Path,
     repo_path: Path = None,
     ignored_dirs: list[str] = None,
-) -> bool:
-    """Checks if a file path is inside any of the ignored directories.
+) -> Optional[str]:
+    """Determines which ignore pattern (if any) matches the file path.
 
-    Supports simple directory names (e.g. 'node_modules') and specific
-    subdirectories relative to the repo root (e.g. '.github/cache').
+    Supports:
+        - Archon's own output directories (data/processed/ and data/chroma_db/)
+        - Suffix/extension checks (e.g. '.pyc', '.log')
+        - Wildcard pattern matching (e.g. '*.log', '**/logs/*') using fnmatch
+        - Exact directory segment matching (e.g. if segment '.git' is in path parts)
+        - Subpath prefix matching (e.g. if path is inside 'coverage/' or 'htmlcov/')
 
     Args:
         file_path: Path of the file.
         repo_path: Optional repository root path.
-        ignored_dirs: Optional list of ignored directories.
+        ignored_dirs: Optional list of ignored directories/patterns.
 
     Returns:
-        True if the file is inside an ignored directory, False otherwise.
+        The matching ignore pattern string, or None if the file should not be ignored.
     """
-    if not ignored_dirs:
-        return False
+    # 1. Project-aware check: Ignore only Archon's own generated output directories.
+    # We resolve the project root relative to this file's position (Archon/src/ingestion/file_filter.py).
+    # Project root is 2 levels up from src/ingestion.
+    project_root = Path(__file__).resolve().parents[2]
+    archon_processed = project_root / "data" / "processed"
+    archon_chroma = project_root / "data" / "chroma_db"
 
-    # Get relative path components to match paths like .github/cache
+    try:
+        abs_path = file_path.resolve()
+        abs_processed = archon_processed.resolve()
+        abs_chroma = archon_chroma.resolve()
+        if abs_path.is_relative_to(abs_processed) or abs_path.is_relative_to(abs_chroma):
+            return "archon_output_dir"
+    except Exception:
+        # Fallback comparison if resolution fails
+        if file_path.is_relative_to(archon_processed) or file_path.is_relative_to(archon_chroma):
+            return "archon_output_dir"
+
+    if not ignored_dirs:
+        return None
+
+    # Get relative path to repo_path to perform subpath and wildcard checks
     if repo_path:
         try:
             rel_path = file_path.relative_to(repo_path)
@@ -37,39 +61,79 @@ def should_ignore_directory(
     else:
         rel_path = file_path
 
-    parts = rel_path.parts[:-1]  # Exclude the filename itself
+    rel_path_str = str(rel_path).replace("\\", "/")
+    file_name = file_path.name
+    parts = rel_path.parts
 
-    for ignored in ignored_dirs:
-        if "/" in ignored or "\\" in ignored:
-            # Check if this ignored path exists as a contiguous sub-sequence of parts
-            ignored_parts = Path(ignored).parts
-            n_ignored = len(ignored_parts)
-            n_parts = len(parts)
-            for idx in range(n_parts - n_ignored + 1):
-                if parts[idx : idx + n_ignored] == ignored_parts:
-                    logger.debug(
-                        f"Directory ignore match: File '{file_path}' skipped because "
-                        f"it matched subpath pattern '{ignored}' relative to repo root."
-                    )
-                    return True
+    for pattern in ignored_dirs:
+        if not pattern:
+            continue
+
+        pattern_clean = pattern.replace("\\", "/").strip()
+
+        # A. Suffix/extension check (e.g. '.log', '.pyc')
+        if pattern_clean.startswith(".") and "/" not in pattern_clean and "*" not in pattern_clean:
+            if file_path.suffix.lower() == pattern_clean.lower():
+                return pattern
+
+        # B. Wildcard pattern matching (e.g. '*.log', 'data/processed/*')
+        if "*" in pattern_clean or "?" in pattern_clean:
+            # Check filename match
+            if fnmatch.fnmatch(file_name.lower(), pattern_clean.lower()):
+                return pattern
+            # Check relative path match
+            if fnmatch.fnmatch(rel_path_str.lower(), pattern_clean.lower()):
+                return pattern
+            # Check subfolders (e.g., if rel_path_str is "some/dir/file.log" and pattern is "*.log")
+            if fnmatch.fnmatch(rel_path_str.lower(), f"**/{pattern_clean.lower()}"):
+                return pattern
+            continue
+
+        # C. Exact segment or subpath prefix checks
+        is_dir_pattern = pattern_clean.endswith("/")
+        clean_pat = pattern_clean[:-1] if is_dir_pattern else pattern_clean
+
+        if "/" not in clean_pat:
+            # Segment matches directory exactly
+            if clean_pat in parts:
+                return pattern
         else:
-            if ignored in parts:
-                logger.debug(
-                    f"Directory ignore match: File '{file_path}' skipped because "
-                    f"parent directory segment '{ignored}' is in ignored list."
-                )
-                return True
+            # Matches relative subpath prefix or is a subpath of segments
+            if rel_path_str == clean_pat or rel_path_str.startswith(clean_pat + "/"):
+                return pattern
 
-    # Absolute parent check in case repo_path wasn't provided or file_path is absolute
-    if not repo_path:
-        for parent in file_path.parents:
-            if parent.name in ignored_dirs:
-                logger.debug(
-                    f"Directory ignore match: File '{file_path}' skipped because "
-                    f"absolute parent segment '{parent.name}' is in ignored list."
-                )
-                return True
+            pat_parts = clean_pat.split("/")
+            n_pat = len(pat_parts)
+            n_parts = len(parts)
+            for idx in range(n_parts - n_pat + 1):
+                if list(parts[idx : idx + n_pat]) == pat_parts:
+                    return pattern
 
+    return None
+
+
+def should_ignore_directory(
+    file_path: Path,
+    repo_path: Path = None,
+    ignored_dirs: list[str] = None,
+) -> bool:
+    """Checks if a file path is inside any of the ignored directories or patterns.
+
+    Args:
+        file_path: Path of the file.
+        repo_path: Optional repository root path.
+        ignored_dirs: Optional list of ignored directories.
+
+    Returns:
+        True if the file is inside an ignored directory/pattern, False otherwise.
+    """
+    matched_pattern = get_ignore_pattern(file_path, repo_path, ignored_dirs)
+    if matched_pattern is not None:
+        logger.debug(
+            f"Directory/File ignore match: File '{file_path}' skipped because "
+            f"it matched ignore pattern '{matched_pattern}'."
+        )
+        return True
     return False
 
 

@@ -2,7 +2,7 @@
 
 import json
 from pathlib import Path
-from src.ingestion.file_filter import should_ignore_directory, is_text_file
+from src.ingestion.file_filter import should_ignore_directory, is_text_file, get_ignore_pattern
 from src.parsing.language_detector import detect_language
 from src.utils.config import load_config
 from src.utils.logger import get_logger
@@ -69,6 +69,7 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
     duplicates_removed_count = 0
     parent_child_relationships_count = 0
     symbol_type_distribution: dict[str, int] = {}
+    ignored_by_rule: dict[str, int] = {}
 
     logger.info(f"Parsing repository '{repo_name}' recursively at '{repo_path}'...")
 
@@ -79,9 +80,11 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
         files_found += 1
         logger.debug(f"File discovered: {path}")
 
-        # 1. Ignore common directories
-        if should_ignore_directory(path, repo_path_obj, ignored_dirs):
-            logger.debug(f"File skipped: '{path}' matches ignored directories list.")
+        # 1. Ignore common directories/patterns
+        ignore_pat = get_ignore_pattern(path, repo_path_obj, ignored_dirs)
+        if ignore_pat is not None:
+            logger.debug(f"File skipped: '{path}' matched ignore pattern '{ignore_pat}'.")
+            ignored_by_rule[ignore_pat] = ignored_by_rule.get(ignore_pat, 0) + 1
             ignored_directory_skips += 1
             skipped_files += 1
             continue
@@ -255,6 +258,8 @@ def parse_repository(repo_path: str, config: dict = None) -> tuple[list[dict], d
         "large_skipped": large_skipped,
         "ignored_directory_skips": ignored_directory_skips,
         "ignored_directories": ignored_dirs,
+        "files_ignored": ignored_directory_skips,
+        "ignored_by_rule": ignored_by_rule,
         "languages_detected": sorted(list(languages_detected)),
         # AST statistics
         "functions": functions_count,

@@ -85,7 +85,15 @@ def main() -> None:
         )
 
         # 5. Print statistics to console
-        print(f"\nFiles Parsed: {stats['files_processed']}\n")
+        print(f"\nFiles Parsed: {stats['files_processed']}")
+        print(f"Files Ignored: {stats.get('files_ignored', 0)}\n")
+
+        ignored_by_rule = stats.get("ignored_by_rule", {})
+        if ignored_by_rule:
+            print("Ignored:")
+            for rule, count in sorted(ignored_by_rule.items(), key=lambda item: item[1], reverse=True):
+                print(f"  {rule}: {count}")
+            print()
 
         print("--- AST Optimization Report ---")
         print(f"Total AST records (raw): {stats['total_ast_records']}")
