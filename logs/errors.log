@@ -219,3 +219,86 @@ Traceback (most recent call last):
         f"Repository '{repo_name}' is already indexed. Use --force-reindex to rebuild it."
     )
 ValueError: Repository 'mock-repo-a' is already indexed. Use --force-reindex to rebuild it.
+2026-06-27 21:50:45 | [20260627_215045] | ERROR | main | Pipeline failed in session 20260627_215045: Ingestion blocked: Archon cannot index its own codebase ('Archon.AI-') unless explicitly overridden with --allow-self-indexing.
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/main.py", line 87, in main
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Ingestion blocked: Archon cannot index its own codebase ('Archon.AI-') unless explicitly overridden with --allow-self-indexing.
+2026-06-27 21:51:03 | [20260627_215103] | ERROR | main | Pipeline failed in session 20260627_215103: Ingestion blocked: Archon cannot index its own codebase ('Archon.AI-') unless explicitly overridden with --allow-self-indexing.
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/main.py", line 87, in main
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Ingestion blocked: Archon cannot index its own codebase ('Archon.AI-') unless explicitly overridden with --allow-self-indexing.
+2026-06-27 21:51:16 | [20260627_215116] | ERROR | clone_repo | Failed to clone repository from /tmp/mock-repo-a: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: repository '/tmp/mock-repo-a' does not exist
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 104, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: repository '/tmp/mock-repo-a' does not exist
+'
+2026-06-27 21:51:16 | [20260627_215116] | ERROR | main | Pipeline failed in session 20260627_215116: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: repository '/tmp/mock-repo-a' does not exist
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/main.py", line 113, in main
+    local_path = clone_repository(args.repo_url)
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 104, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: repository '/tmp/mock-repo-a' does not exist
+'
+2026-06-27 21:52:26 | [20260627_215226] | ERROR | main | Pipeline failed in session 20260627_215226: Ingestion blocked: Archon cannot index its own codebase ('Archon.AI-') unless explicitly overridden with --allow-self-indexing.
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/main.py", line 87, in main
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Ingestion blocked: Archon cannot index its own codebase ('Archon.AI-') unless explicitly overridden with --allow-self-indexing.

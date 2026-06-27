@@ -140,3 +140,48 @@ git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
 2026-06-27 21:44:18 | [20260627_214415] | INFO | clone_repo | Successfully pulled latest changes.
 2026-06-27 21:44:19 | [20260627_214419] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
 2026-06-27 21:44:19 | [20260627_214419] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:49:51 | [20260627_214951] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:49:51 | [20260627_214951] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:50:07 | [20260627_215007] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-b into /home/lakshay/Archon AI/data/repositories/mock-repo-b...
+2026-06-27 21:50:07 | [20260627_215007] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-b.
+2026-06-27 21:50:45 | [20260627_215045] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:50:45 | [20260627_215045] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:51:16 | [20260627_215116] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:51:16 | [20260627_215116] | ERROR | clone_repo | Failed to clone repository from /tmp/mock-repo-a: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: repository '/tmp/mock-repo-a' does not exist
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 104, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: repository '/tmp/mock-repo-a' does not exist
+'
+2026-06-27 21:51:29 | [20260627_215129] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:51:29 | [20260627_215129] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:51:45 | [20260627_215145] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-b into /home/lakshay/Archon AI/data/repositories/mock-repo-b...
+2026-06-27 21:51:45 | [20260627_215145] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-b.
+2026-06-27 21:52:26 | [20260627_215226] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:52:26 | [20260627_215226] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:52:39 | [20260627_215239] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:52:39 | [20260627_215239] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.

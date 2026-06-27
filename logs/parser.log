@@ -1361,3 +1361,38 @@
 2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/route_a.py' (Detected language: python)
 2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
 2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:49:51 | [20260627_214951] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:49:51 | [20260627_214951] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:49:51 | [20260627_214951] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/main.py' (Detected language: python)
+2026-06-27 21:49:51 | [20260627_214951] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:49:51 | [20260627_214951] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:50:07 | [20260627_215007] | INFO | parser | Parsing repository 'mock-repo-b' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-b'...
+2026-06-27 21:50:07 | [20260627_215007] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:50:07 | [20260627_215007] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-b/main.py' (Detected language: python)
+2026-06-27 21:50:07 | [20260627_215007] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-b/ast_dataset.json
+2026-06-27 21:50:07 | [20260627_215007] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-b/embedding_dataset.json
+2026-06-27 21:50:45 | [20260627_215045] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:50:45 | [20260627_215045] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:50:45 | [20260627_215045] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/main.py' (Detected language: python)
+2026-06-27 21:50:45 | [20260627_215045] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:50:45 | [20260627_215045] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:51:29 | [20260627_215129] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:51:29 | [20260627_215129] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:51:29 | [20260627_215129] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/main.py' (Detected language: python)
+2026-06-27 21:51:29 | [20260627_215129] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:51:29 | [20260627_215129] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:51:45 | [20260627_215145] | INFO | parser | Parsing repository 'mock-repo-b' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-b'...
+2026-06-27 21:51:45 | [20260627_215145] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:51:45 | [20260627_215145] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-b/main.py' (Detected language: python)
+2026-06-27 21:51:45 | [20260627_215145] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-b/ast_dataset.json
+2026-06-27 21:51:45 | [20260627_215145] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-b/embedding_dataset.json
+2026-06-27 21:52:26 | [20260627_215226] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:52:26 | [20260627_215226] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:52:26 | [20260627_215226] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/main.py' (Detected language: python)
+2026-06-27 21:52:26 | [20260627_215226] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:52:26 | [20260627_215226] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:52:39 | [20260627_215239] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:52:39 | [20260627_215239] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:52:39 | [20260627_215239] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/main.py' (Detected language: python)
+2026-06-27 21:52:39 | [20260627_215239] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:52:39 | [20260627_215239] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
