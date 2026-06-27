@@ -1396,3 +1396,13 @@
 2026-06-27 21:52:39 | [20260627_215239] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/main.py' (Detected language: python)
 2026-06-27 21:52:39 | [20260627_215239] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
 2026-06-27 21:52:39 | [20260627_215239] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:56:15 | [20260627_215615] | INFO | parser | Parsing repository 'react-repo' recursively at '/home/lakshay/Archon AI/data/repositories/react-repo'...
+2026-06-27 21:56:15 | [20260627_215615] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'router.py'. Language: python
+2026-06-27 21:56:15 | [20260627_215615] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/react-repo/router.py' (Detected language: python)
+2026-06-27 21:56:15 | [20260627_215615] | INFO | parser | Successfully saved 1 records to data/processed/react-repo/ast_dataset.json
+2026-06-27 21:56:15 | [20260627_215615] | INFO | parser | Successfully saved 1 records to data/processed/react-repo/embedding_dataset.json
+2026-06-27 21:56:32 | [20260627_215631] | INFO | parser | Parsing repository 'fastapi-repo' recursively at '/home/lakshay/Archon AI/data/repositories/fastapi-repo'...
+2026-06-27 21:56:32 | [20260627_215631] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'dependencies.py'. Language: python
+2026-06-27 21:56:32 | [20260627_215631] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/fastapi-repo/dependencies.py' (Detected language: python)
+2026-06-27 21:56:32 | [20260627_215631] | INFO | parser | Successfully saved 1 records to data/processed/fastapi-repo/ast_dataset.json
+2026-06-27 21:56:32 | [20260627_215631] | INFO | parser | Successfully saved 1 records to data/processed/fastapi-repo/embedding_dataset.json
