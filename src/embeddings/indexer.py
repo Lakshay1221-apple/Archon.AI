@@ -70,6 +70,7 @@ class Indexer:
             indexed_records.append(
                 {
                     "symbol_id": record["symbol_id"],
+                    "repo": record.get("repo", "Unknown"),
                     "symbol_name": record["symbol_name"],
                     "symbol_type": record["symbol_type"],
                     "file": record["file"],
@@ -102,21 +103,30 @@ class Indexer:
 
 
 if __name__ == "__main__":
+    import argparse
+    from src.repository.repository_manager import validate_repository
+
+    parser = argparse.ArgumentParser(description="Indexer for generating embeddings.")
+    parser.add_argument("repo_name", nargs="?", default=None, help="Name of the repository to index.")
+    args = parser.parse_args()
 
     indexer = Indexer()
 
-    indexed_records = indexer.build_index(
-        "data/processed/embedding_dataset.json"
-    )
+    if args.repo_name:
+        # Validate repository exists (raises error if missing)
+        validate_repository(args.repo_name)
+        embedding_path = f"data/processed/{args.repo_name}/embedding_dataset.json"
+        indexed_path = f"data/processed/{args.repo_name}/indexed_dataset.json"
+    else:
+        embedding_path = "data/processed/embedding_dataset.json"
+        indexed_path = "data/processed/indexed_dataset.json"
 
-    indexer.save_index(
-        indexed_records,
-        "data/processed/indexed_dataset.json"
-    )
+    indexed_records = indexer.build_index(embedding_path)
+    indexer.save_index(indexed_records, indexed_path)
 
     print(f"Indexed Records: {len(indexed_records)}")
+    if indexed_records:
+        print("\nExample Record:\n")
+        print(indexed_records[0])
 
-    print("\nExample Record:\n")
-
-    print(indexed_records[0])
 

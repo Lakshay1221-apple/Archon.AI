@@ -30,6 +30,16 @@ def main() -> None:
         default="data/processed/ast_dataset.json",
         help="Output path for the generated AST dataset JSON file.",
     )
+    parser.add_argument(
+        "--allow-self-indexing",
+        action="store_true",
+        help="Allow Archon to index its own codebase.",
+    )
+    parser.add_argument(
+        "--force-reindex",
+        action="store_true",
+        help="Force reindexing by cleaning all previous data first.",
+    )
 
     args = parser.parse_args()
 
@@ -48,6 +58,57 @@ def main() -> None:
         repo_name = extract_repo_name(args.repo_url)
         logger.info(f"Selected repository: '{repo_name}' from URL: '{args.repo_url}'")
 
+        # Self-indexing check
+        def is_self_indexing(url: str, name: str) -> bool:
+            if name in ("Archon.AI-", "Archon AI", "archon-ai"):
+                return True
+            try:
+                target_path = Path(url).resolve()
+                if target_path == Path.cwd().resolve():
+                    return True
+            except Exception:
+                pass
+            try:
+                import git
+                repo = git.Repo(Path.cwd())
+                origin_url = repo.remote("origin").url
+                def norm(u):
+                    u = u.strip()
+                    if u.endswith(".git"):
+                        u = u[:-4]
+                    return u.lower().rstrip("/")
+                if norm(url) == norm(origin_url):
+                    return True
+            except Exception:
+                pass
+            return False
+
+        if is_self_indexing(args.repo_url, repo_name) and not args.allow_self_indexing:
+            raise ValueError(
+                f"Ingestion blocked: Archon cannot index its own codebase ('{repo_name}') unless "
+                "explicitly overridden with --allow-self-indexing."
+            )
+
+        # Registry check & re-index logic
+        from src.repository.repository_manager import (
+            list_repositories,
+            register_repository,
+            delete_repository,
+            update_repository_metadata
+        )
+
+        if repo_name in list_repositories():
+            if args.force_reindex:
+                logger.info(f"Repository '{repo_name}' is already indexed. Cleaning up old data first...")
+                delete_repository(repo_name)
+            else:
+                raise ValueError(
+                    f"Repository '{repo_name}' is already indexed. Use --force-reindex to rebuild it."
+                )
+
+        # Register repository in 'indexing' status
+        register_repository(args.repo_url)
+
         clone_start = time.perf_counter()
         local_path = clone_repository(args.repo_url)
         clone_duration = time.perf_counter() - clone_start
@@ -62,16 +123,42 @@ def main() -> None:
         # 3. Save datasets
         save_start = time.perf_counter()
 
+        if args.output == "data/processed/ast_dataset.json":
+            output_dir = Path("data/processed") / repo_name
+        else:
+            output_dir = Path(args.output).parent
+
+        output_dir.mkdir(parents=True, exist_ok=True)
+        ast_output_path = output_dir / "ast_dataset.json"
+        embedding_output_path = output_dir / "embedding_dataset.json"
+
         # Save complete AST dataset
-        save_dataset(records, args.output)
+        save_dataset(records, str(ast_output_path))
 
         # Filter and save dedicated Embedding dataset
         embedding_records = [r for r in records if r.get("embedding_candidate")]
-        embedding_output_path = str(Path(args.output).parent / "embedding_dataset.json")
-        save_dataset(embedding_records, embedding_output_path)
+        save_dataset(embedding_records, str(embedding_output_path))
 
         save_duration = time.perf_counter() - save_start
         logger.info(f"Dataset saving phase complete in {save_duration:.2f}s.")
+
+        # Update metadata stats in registry
+        from collections import Counter
+        from datetime import datetime
+        
+        languages = [r.get("language", "unknown") for r in records]
+        language_breakdown = dict(Counter(languages))
+        indexed_at = datetime.utcnow().isoformat() + "Z"
+
+        update_repository_metadata(
+            repo_name,
+            status="indexed",
+            symbol_count=len(records),
+            file_count=stats.get("files_processed", 0),
+            embedding_count=len(embedding_records),
+            language_breakdown=language_breakdown,
+            indexed_at=indexed_at
+        )
 
         total_duration = time.perf_counter() - total_start
 
@@ -121,3 +208,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

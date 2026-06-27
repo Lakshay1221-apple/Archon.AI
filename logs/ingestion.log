@@ -63,3 +63,80 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 2026-06-27 21:10:03 | [20260627_211003] | INFO | clone_repo | Directory /home/lakshay/Archon AI/data/repositories/Archon.AI- already exists. Verifying Git repository status.
 2026-06-27 21:10:03 | [20260627_211003] | INFO | clone_repo | Valid Git repository found. Pulling latest changes from URL: https://github.com/Lakshay1221-apple/Archon.AI-.git
 2026-06-27 21:10:14 | [20260627_211003] | INFO | clone_repo | Successfully pulled latest changes.
+2026-06-27 21:42:27 | [20260627_214227] | INFO | clone_repo | Directory /home/lakshay/Archon AI/data/repositories/mock-repo-a already exists. Verifying Git repository status.
+2026-06-27 21:42:27 | [20260627_214227] | WARNING | clone_repo | Repository at /home/lakshay/Archon AI/data/repositories/mock-repo-a is invalid or bare. Re-cloning...
+2026-06-27 21:42:27 | [20260627_214227] | INFO | clone_repo | Cloning repository from /home/lakshay/Archon AI/data/repositories/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:42:27 | [20260627_214227] | ERROR | clone_repo | Failed to clone repository from /home/lakshay/Archon AI/data/repositories/mock-repo-a: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /home/lakshay/Archon AI/data/repositories/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-a' already exists and is not an empty directory.
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 104, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /home/lakshay/Archon AI/data/repositories/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-a' already exists and is not an empty directory.
+'
+2026-06-27 21:42:51 | [20260627_214251] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:42:51 | [20260627_214251] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:42:51 | [20260627_214251] | INFO | clone_repo | Directory /home/lakshay/Archon AI/data/repositories/mock-repo-b already exists. Verifying Git repository status.
+2026-06-27 21:42:51 | [20260627_214251] | WARNING | clone_repo | Repository at /home/lakshay/Archon AI/data/repositories/mock-repo-b is invalid or bare. Re-cloning...
+2026-06-27 21:42:51 | [20260627_214251] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-b into /home/lakshay/Archon AI/data/repositories/mock-repo-b...
+2026-06-27 21:42:51 | [20260627_214251] | ERROR | clone_repo | Failed to clone repository from /tmp/mock-repo-b: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-b /home/lakshay/Archon AI/data/repositories/mock-repo-b
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-b' already exists and is not an empty directory.
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 104, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-b /home/lakshay/Archon AI/data/repositories/mock-repo-b
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-b' already exists and is not an empty directory.
+'
+2026-06-27 21:43:23 | [20260627_214323] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:43:23 | [20260627_214323] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:43:24 | [20260627_214324] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-b into /home/lakshay/Archon AI/data/repositories/mock-repo-b...
+2026-06-27 21:43:24 | [20260627_214324] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-b.
+2026-06-27 21:44:15 | [20260627_214415] | INFO | clone_repo | Directory /home/lakshay/Archon AI/data/repositories/Archon AI already exists. Verifying Git repository status.
+2026-06-27 21:44:15 | [20260627_214415] | INFO | clone_repo | Valid Git repository found. Pulling latest changes from URL: /home/lakshay/Archon AI
+2026-06-27 21:44:18 | [20260627_214415] | INFO | clone_repo | Successfully pulled latest changes.
+2026-06-27 21:44:19 | [20260627_214419] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:44:19 | [20260627_214419] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.

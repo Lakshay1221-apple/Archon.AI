@@ -1206,3 +1206,158 @@
 2026-06-27 21:10:23 | [20260627_211023] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/src/main.py' (Detected language: python)
 2026-06-27 21:10:23 | [20260627_211023] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
 2026-06-27 21:10:23 | [20260627_211023] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/rust-module/src/lib.rs' (Detected language: rust)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Parsing repository 'mock-universal-repo' recursively at '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo'...
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'large_file.txt'. Language: text
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/large_file.txt' (Detected language: text)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/LICENSE' (Detected language: text)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'README.md'. Language: markdown
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/README.md' (Detected language: markdown)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/Makefile' (Detected language: makefile)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/Dockerfile' (Detected language: dockerfile)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/frontend/index.ts' (Detected language: typescript)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/frontend/app.js' (Detected language: javascript)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/rust-module/Cargo.toml' (Detected language: toml)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/logo.png' is classified as a binary file.
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/App.class' is classified as a binary file.
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/App.java' (Detected language: java)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/helper.o' is classified as a binary file.
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/core.cpp' (Detected language: cpp)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/helper.c' (Detected language: c)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/main.py' (Detected language: python)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/rust-module/src/lib.rs' (Detected language: rust)
+2026-06-27 21:42:51 | [20260627_214251] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:42:51 | [20260627_214251] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'route_a.py'. Language: python
+2026-06-27 21:42:51 | [20260627_214251] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/route_a.py' (Detected language: python)
+2026-06-27 21:42:51 | [20260627_214251] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:42:51 | [20260627_214251] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:43:23 | [20260627_214323] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:43:23 | [20260627_214323] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'route_a.py'. Language: python
+2026-06-27 21:43:23 | [20260627_214323] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/route_a.py' (Detected language: python)
+2026-06-27 21:43:23 | [20260627_214323] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:43:23 | [20260627_214323] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:43:24 | [20260627_214324] | INFO | parser | Parsing repository 'mock-repo-b' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-b'...
+2026-06-27 21:43:24 | [20260627_214324] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'route_b.py'. Language: python
+2026-06-27 21:43:24 | [20260627_214324] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-b/route_b.py' (Detected language: python)
+2026-06-27 21:43:24 | [20260627_214324] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-b/ast_dataset.json
+2026-06-27 21:43:24 | [20260627_214324] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-b/embedding_dataset.json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Parsing repository 'Archon AI' recursively at '/home/lakshay/Archon AI/data/repositories/Archon AI'...
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments guessed lexer via code heuristics for '.gitignore'. Language: gas
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/.gitignore' (Detected language: gas)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'pyproject.toml'. Language: toml
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/pyproject.toml' (Detected language: toml)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'README.md'. Language: markdown
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/README.md' (Detected language: markdown)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/main.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Falling back to extension dictionary for '.python-version' (ext: ''). Language: text
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/.python-version' (Detected language: text)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'logging_config.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/configs/logging_config.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'ingestion_config.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/configs/ingestion_config.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File skipped: '/home/lakshay/Archon AI/data/repositories/Archon AI/prd/Archon AI PRD.pdf' is classified as a binary file.
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'test_universal_ingestion.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/tests/test_universal_ingestion.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'test_ast_parsers.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/tests/test_ast_parsers.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'test_semantic_enrichment.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/tests/test_semantic_enrichment.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'test_indexing_filters.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/tests/test_indexing_filters.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'ast_dataset.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/data/processed/ast_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'indexed_dataset.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/data/processed/indexed_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'repository_dataset.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/data/processed/repository_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'embedding_dataset.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/data/processed/embedding_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'language_detector.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/parsing/language_detector.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/parsing/parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/parsing/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'clone_repo.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ingestion/clone_repo.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ingestion/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'file_filter.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ingestion/file_filter.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'retriever.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/retrieval/retriever.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/retrieval/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/pipeline/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/prompting/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'semantic_builder.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/enrichment/semantic_builder.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'javascript_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/javascript_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'typescript_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/typescript_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'models.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/models.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'rust_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/rust_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'python_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/python_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'registry.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/registry.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'generic_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/generic_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/vectorstore/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'logger.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/utils/logger.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/utils/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'config.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/utils/config.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/llm/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/chunking/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'manual_retriever.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/manual_retriever.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'embedder.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/embedder.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'chroma_store.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/chroma_store.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'indexer.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/indexer.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/__init__.py' (Detected language: python)
+2026-06-27 21:44:19 | [20260627_214415] | INFO | parser | Successfully saved 1832 records to data/processed/Archon AI/ast_dataset.json
+2026-06-27 21:44:19 | [20260627_214415] | INFO | parser | Successfully saved 1832 records to data/processed/Archon AI/embedding_dataset.json
+2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:44:19 | [20260627_214419] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'route_a.py'. Language: python
+2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/route_a.py' (Detected language: python)
+2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json

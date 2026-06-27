@@ -1,0 +1,22 @@
+{
+  "Archon AI": {
+    "name": "Archon AI",
+    "url": "/home/lakshay/Archon AI",
+    "collection": "repo_Archon AI",
+    "status": "indexed",
+    "indexed_at": "2026-06-27T16:14:19.230345Z",
+    "symbol_count": 1832,
+    "file_count": 45,
+    "embedding_count": 1832,
+    "index_version": "1.0",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "language_breakdown": {
+      "gas": 1,
+      "toml": 1,
+      "markdown": 11,
+      "python": 132,
+      "text": 1,
+      "json": 1686
+    }
+  }
+}

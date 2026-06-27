@@ -27,17 +27,27 @@ from src.embeddings.embedder import Embedder
 class Retriever:
     def __init__(
         self,
-        persist_directory: str = "data/chroma_db",
-        collection_name: str = "archon_codebase",
+        repository_name: str = None,
+        persist_directory: str = None,
+        collection_name: str = None,
     ):
         self.embedder = Embedder()
 
+        if repository_name:
+            from src.repository.repository_manager import validate_repository
+            validate_repository(repository_name)
+            self.persist_directory = f"data/chroma_db/{repository_name}"
+            self.collection_name = f"repo_{repository_name}"
+        else:
+            self.persist_directory = persist_directory or "data/chroma_db"
+            self.collection_name = collection_name or "archon_codebase"
+
         self.client = chromadb.PersistentClient(
-            path=persist_directory
+            path=self.persist_directory
         )
 
         self.collection = self.client.get_collection(
-            name=collection_name
+            name=self.collection_name
         )
 
     def search(
@@ -66,6 +76,7 @@ class Retriever:
             formatted_results.append(
                 {
                     "symbol_id": symbol_id,
+                    "repo": metadata.get("repo", "Unknown"),
                     "symbol_name": metadata.get(
                         "symbol_name",
                         "Unknown",
@@ -109,8 +120,13 @@ class Retriever:
 
 
 if __name__ == "__main__":
+    import argparse
 
-    retriever = Retriever()
+    parser = argparse.ArgumentParser(description="Retriever Layer.")
+    parser.add_argument("repo_name", nargs="?", default=None, help="Name of the repository to query.")
+    args = parser.parse_args()
+
+    retriever = Retriever(repository_name=args.repo_name)
 
     query = input("\nAsk a question:\n> ")
 
@@ -120,6 +136,7 @@ if __name__ == "__main__":
 
     for rank, result in enumerate(results, start=1):
         print(f"{rank}. {result['symbol_name']} ({result['symbol_type']}) | Distance: {result['distance']:.4f}")
+        print(f"Repository: {result['repo']}")
         print(f"File: {result['file']}")        
         print(f"Language: {result['language']}")        
         print(f"Context:")

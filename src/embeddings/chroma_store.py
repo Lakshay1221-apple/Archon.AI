@@ -26,10 +26,19 @@ if project_root not in sys.path:
 import chromadb
 
 class ChromaStore:
-    def __init__(self, persist_directory: str = "data/chroma_db", collection_name: str = "archon_codebase"):
-        self.client = chromadb.PersistentClient(path=persist_directory)
+    def __init__(self, repo_name: str = None, persist_directory: str = None, collection_name: str = None):
+        if repo_name:
+            from src.repository.repository_manager import validate_repository
+            validate_repository(repo_name)
+            self.persist_directory = f"data/chroma_db/{repo_name}"
+            self.collection_name = f"repo_{repo_name}"
+        else:
+            self.persist_directory = persist_directory or "data/chroma_db"
+            self.collection_name = collection_name or "archon_codebase"
+
+        self.client = chromadb.PersistentClient(path=self.persist_directory)
         self.collection = self.client.get_or_create_collection(
-            name=collection_name
+            name=self.collection_name
         )
 
     def load_index(self, index_path: str) -> list[dict]:
@@ -54,6 +63,7 @@ class ChromaStore:
             documents.append(record.get("retrieval_text", record["symbol_name"]))
             metadatas.append(
                 {
+                    "repo": record.get("repo", "Unknown"),
                     "symbol_name": record["symbol_name"],
                     "symbol_type": record["symbol_type"],
                     "file": record["file"],
@@ -72,7 +82,16 @@ class ChromaStore:
         print(f"Stored {len(ids)} records in ChromaDB")
         
 if __name__ == "__main__":
-    store = ChromaStore()
-    store.ingest(
-        "data/processed/indexed_dataset.json"
-    )
+    import argparse
+
+    parser = argparse.ArgumentParser(description="ChromaDB storage layer.")
+    parser.add_argument("repo_name", nargs="?", default=None, help="Name of the repository to ingest.")
+    args = parser.parse_args()
+
+    if args.repo_name:
+        store = ChromaStore(repo_name=args.repo_name)
+        store.ingest(f"data/processed/{args.repo_name}/indexed_dataset.json")
+    else:
+        store = ChromaStore()
+        store.ingest("data/processed/indexed_dataset.json")
+

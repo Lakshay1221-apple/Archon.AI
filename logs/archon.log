@@ -1821,3 +1821,620 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 2026-06-27 21:10:23 | [20260627_211023] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
 2026-06-27 21:10:23 | [20260627_211023] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-6/test_parsing_and_chunking0/mock-universal-repo/rust-module/src/lib.rs' (Detected language: rust)
 2026-06-27 21:10:23 | [20260627_211023] | INFO | parser | Selected parser RustParser for file 'rust-module/src/lib.rs' (Detected language: rust)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:42:03 | [20260627_214203] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:42:03 | [20260627_214203] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:42:03 | [20260627_214203] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Parsing repository 'mock-universal-repo' recursively at '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo'...
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'large_file.txt'. Language: text
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/large_file.txt' (Detected language: text)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser GenericParser for file 'large_file.txt' (Detected language: text)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched standard text metadata name heuristic for 'LICENSE'. Language: text
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/LICENSE' (Detected language: text)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser GenericParser for file 'LICENSE' (Detected language: text)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'README.md'. Language: markdown
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/README.md' (Detected language: markdown)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser GenericParser for file 'README.md' (Detected language: markdown)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Makefile name heuristic for 'Makefile'. Language: makefile
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/Makefile' (Detected language: makefile)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser GenericParser for file 'Makefile' (Detected language: makefile)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Dockerfile name heuristic for 'Dockerfile'. Language: dockerfile
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/Dockerfile' (Detected language: dockerfile)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser GenericParser for file 'Dockerfile' (Detected language: dockerfile)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'index.ts'. Language: typescript
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/frontend/index.ts' (Detected language: typescript)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser TypeScriptParser for file 'frontend/index.ts' (Detected language: typescript)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'app.js'. Language: javascript
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/frontend/app.js' (Detected language: javascript)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser JavaScriptParser for file 'frontend/app.js' (Detected language: javascript)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Matched Cargo.toml name heuristic for 'Cargo.toml'. Language: toml
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/rust-module/Cargo.toml' (Detected language: toml)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser GenericParser for file 'rust-module/Cargo.toml' (Detected language: toml)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/logo.png' is classified as a binary file.
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/App.class' is classified as a binary file.
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'App.java'. Language: java
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/App.java' (Detected language: java)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser GenericParser for file 'src/App.java' (Detected language: java)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File skipped: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/helper.o' is classified as a binary file.
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'core.cpp'. Language: cpp
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/core.cpp' (Detected language: cpp)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser GenericParser for file 'src/core.cpp' (Detected language: cpp)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'helper.c'. Language: c
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/helper.c' (Detected language: c)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser GenericParser for file 'src/helper.c' (Detected language: c)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/src/main.py' (Detected language: python)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser PythonParser for file 'src/main.py' (Detected language: python)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'lib.rs'. Language: rust
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | File accepted: '/tmp/pytest-of-lakshay/pytest-7/test_parsing_and_chunking0/mock-universal-repo/rust-module/src/lib.rs' (Detected language: rust)
+2026-06-27 21:42:03 | [20260627_214203] | INFO | parser | Selected parser RustParser for file 'rust-module/src/lib.rs' (Detected language: rust)
+2026-06-27 21:42:27 | [20260627_214227] | INFO | main | Universal ingestion pipeline started. Session ID: [SESSION_ID=20260627_214227]
+2026-06-27 21:42:27 | [20260627_214227] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:42:27 | [20260627_214227] | INFO | main | Selected repository: 'mock-repo-a' from URL: '/home/lakshay/Archon AI/data/repositories/mock-repo-a'
+2026-06-27 21:42:27 | [20260627_214227] | INFO | clone_repo | Directory /home/lakshay/Archon AI/data/repositories/mock-repo-a already exists. Verifying Git repository status.
+2026-06-27 21:42:27 | [20260627_214227] | WARNING | clone_repo | Repository at /home/lakshay/Archon AI/data/repositories/mock-repo-a is invalid or bare. Re-cloning...
+2026-06-27 21:42:27 | [20260627_214227] | INFO | clone_repo | Cloning repository from /home/lakshay/Archon AI/data/repositories/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:42:27 | [20260627_214227] | ERROR | clone_repo | Failed to clone repository from /home/lakshay/Archon AI/data/repositories/mock-repo-a: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /home/lakshay/Archon AI/data/repositories/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-a' already exists and is not an empty directory.
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 104, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /home/lakshay/Archon AI/data/repositories/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-a' already exists and is not an empty directory.
+'
+2026-06-27 21:42:27 | [20260627_214227] | ERROR | main | Pipeline failed in session 20260627_214227: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /home/lakshay/Archon AI/data/repositories/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-a' already exists and is not an empty directory.
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/main.py", line 113, in main
+    local_path = clone_repository(args.repo_url)
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 104, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /home/lakshay/Archon AI/data/repositories/mock-repo-a /home/lakshay/Archon AI/data/repositories/mock-repo-a
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-a' already exists and is not an empty directory.
+'
+2026-06-27 21:42:51 | [20260627_214251] | INFO | main | Universal ingestion pipeline started. Session ID: [SESSION_ID=20260627_214251]
+2026-06-27 21:42:51 | [20260627_214251] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:42:51 | [20260627_214251] | INFO | main | Selected repository: 'mock-repo-a' from URL: '/tmp/mock-repo-a'
+2026-06-27 21:42:51 | [20260627_214251] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:42:51 | [20260627_214251] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:42:51 | [20260627_214251] | INFO | main | Cloning phase complete in 0.03s.
+2026-06-27 21:42:51 | [20260627_214251] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:42:51 | [20260627_214251] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'route_a.py'. Language: python
+2026-06-27 21:42:51 | [20260627_214251] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/route_a.py' (Detected language: python)
+2026-06-27 21:42:51 | [20260627_214251] | INFO | parser | Selected parser PythonParser for file 'route_a.py' (Detected language: python)
+2026-06-27 21:42:51 | [20260627_214251] | INFO | main | Parsing phase complete in 0.11s.
+2026-06-27 21:42:51 | [20260627_214251] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:42:51 | [20260627_214251] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:42:51 | [20260627_214251] | INFO | main | Dataset saving phase complete in 0.00s.
+2026-06-27 21:42:51 | [20260627_214251] | INFO | main | Performance Metrics:
+  Clone Time: 0.0s
+  Parse Time: 0.1s
+  Dataset Save Time: 0.0s
+  Total Runtime: 0.1s
+2026-06-27 21:42:51 | [20260627_214251] | INFO | main | Universal ingestion pipeline started. Session ID: [SESSION_ID=20260627_214251]
+2026-06-27 21:42:51 | [20260627_214251] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:42:51 | [20260627_214251] | INFO | main | Selected repository: 'mock-repo-b' from URL: '/tmp/mock-repo-b'
+2026-06-27 21:42:51 | [20260627_214251] | INFO | clone_repo | Directory /home/lakshay/Archon AI/data/repositories/mock-repo-b already exists. Verifying Git repository status.
+2026-06-27 21:42:51 | [20260627_214251] | WARNING | clone_repo | Repository at /home/lakshay/Archon AI/data/repositories/mock-repo-b is invalid or bare. Re-cloning...
+2026-06-27 21:42:51 | [20260627_214251] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-b into /home/lakshay/Archon AI/data/repositories/mock-repo-b...
+2026-06-27 21:42:51 | [20260627_214251] | ERROR | clone_repo | Failed to clone repository from /tmp/mock-repo-b: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-b /home/lakshay/Archon AI/data/repositories/mock-repo-b
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-b' already exists and is not an empty directory.
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 104, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-b /home/lakshay/Archon AI/data/repositories/mock-repo-b
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-b' already exists and is not an empty directory.
+'
+2026-06-27 21:42:51 | [20260627_214251] | ERROR | main | Pipeline failed in session 20260627_214251: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-b /home/lakshay/Archon AI/data/repositories/mock-repo-b
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-b' already exists and is not an empty directory.
+'
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/main.py", line 113, in main
+    local_path = clone_repository(args.repo_url)
+  File "/home/lakshay/Archon AI/src/ingestion/clone_repo.py", line 104, in clone_repository
+    git.Repo.clone_from(repo_url, dest_dir)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1568, in clone_from
+    return cls._clone(
+           ~~~~~~~~~~^
+        git,
+        ^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/repo/base.py", line 1439, in _clone
+    finalize_process(proc, stderr=stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/util.py", line 512, in finalize_process
+    proc.wait(**kwargs)
+    ~~~~~~~~~^^^^^^^^^^
+  File "/home/lakshay/Archon AI/.venv/lib/python3.14/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- /tmp/mock-repo-b /home/lakshay/Archon AI/data/repositories/mock-repo-b
+  stderr: 'fatal: destination path '/home/lakshay/Archon AI/data/repositories/mock-repo-b' already exists and is not an empty directory.
+'
+2026-06-27 21:43:23 | [20260627_214323] | INFO | main | Universal ingestion pipeline started. Session ID: [SESSION_ID=20260627_214323]
+2026-06-27 21:43:23 | [20260627_214323] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:43:23 | [20260627_214323] | INFO | main | Selected repository: 'mock-repo-a' from URL: '/tmp/mock-repo-a'
+2026-06-27 21:43:23 | [20260627_214323] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:43:23 | [20260627_214323] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:43:23 | [20260627_214323] | INFO | main | Cloning phase complete in 0.02s.
+2026-06-27 21:43:23 | [20260627_214323] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:43:23 | [20260627_214323] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'route_a.py'. Language: python
+2026-06-27 21:43:23 | [20260627_214323] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/route_a.py' (Detected language: python)
+2026-06-27 21:43:23 | [20260627_214323] | INFO | parser | Selected parser PythonParser for file 'route_a.py' (Detected language: python)
+2026-06-27 21:43:23 | [20260627_214323] | INFO | main | Parsing phase complete in 0.17s.
+2026-06-27 21:43:23 | [20260627_214323] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:43:23 | [20260627_214323] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:43:23 | [20260627_214323] | INFO | main | Dataset saving phase complete in 0.00s.
+2026-06-27 21:43:23 | [20260627_214323] | INFO | main | Performance Metrics:
+  Clone Time: 0.0s
+  Parse Time: 0.2s
+  Dataset Save Time: 0.0s
+  Total Runtime: 0.2s
+2026-06-27 21:43:24 | [20260627_214324] | INFO | main | Universal ingestion pipeline started. Session ID: [SESSION_ID=20260627_214324]
+2026-06-27 21:43:24 | [20260627_214324] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:43:24 | [20260627_214324] | INFO | main | Selected repository: 'mock-repo-b' from URL: '/tmp/mock-repo-b'
+2026-06-27 21:43:24 | [20260627_214324] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-b into /home/lakshay/Archon AI/data/repositories/mock-repo-b...
+2026-06-27 21:43:24 | [20260627_214324] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-b.
+2026-06-27 21:43:24 | [20260627_214324] | INFO | main | Cloning phase complete in 0.02s.
+2026-06-27 21:43:24 | [20260627_214324] | INFO | parser | Parsing repository 'mock-repo-b' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-b'...
+2026-06-27 21:43:24 | [20260627_214324] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'route_b.py'. Language: python
+2026-06-27 21:43:24 | [20260627_214324] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-b/route_b.py' (Detected language: python)
+2026-06-27 21:43:24 | [20260627_214324] | INFO | parser | Selected parser PythonParser for file 'route_b.py' (Detected language: python)
+2026-06-27 21:43:24 | [20260627_214324] | INFO | main | Parsing phase complete in 0.10s.
+2026-06-27 21:43:24 | [20260627_214324] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-b/ast_dataset.json
+2026-06-27 21:43:24 | [20260627_214324] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-b/embedding_dataset.json
+2026-06-27 21:43:24 | [20260627_214324] | INFO | main | Dataset saving phase complete in 0.00s.
+2026-06-27 21:43:24 | [20260627_214324] | INFO | main | Performance Metrics:
+  Clone Time: 0.0s
+  Parse Time: 0.1s
+  Dataset Save Time: 0.0s
+  Total Runtime: 0.1s
+2026-06-27 21:43:30 | [20260627_214330] | INFO | model | No device provided, using cuda:0
+2026-06-27 21:43:31 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:31 | [20260627_214330] | WARNING | _http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-06-27 21:43:31 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:31 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:31 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:31 | [20260627_214330] | INFO | model | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-06-27 21:43:31 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:32 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:32 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:32 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-06-27 21:43:32 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:32 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:33 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:33 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:33 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:33 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:33 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:34 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:34 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:35 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:35 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:36 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:36 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:36 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:36 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:36 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:37 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:37 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:37 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:37 | [20260627_214330] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:38 | [20260627_214330] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-27 21:43:38 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:38 | [20260627_214330] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:38 | [20260627_214330] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-06-27 21:43:45 | [20260627_214345] | INFO | model | No device provided, using cuda:0
+2026-06-27 21:43:46 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:46 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:46 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:46 | [20260627_214345] | WARNING | _http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-06-27 21:43:46 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:46 | [20260627_214345] | INFO | model | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-06-27 21:43:47 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:47 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:47 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:47 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-06-27 21:43:48 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:48 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:48 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:48 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:48 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:49 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:49 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:49 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:50 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:50 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:50 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:51 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:51 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:51 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:51 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:52 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:52 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:52 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:52 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:52 | [20260627_214345] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-27 21:43:53 | [20260627_214345] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-27 21:43:53 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:53 | [20260627_214345] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:54 | [20260627_214345] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-06-27 21:43:58 | [20260627_214317] | INFO | model | No device provided, using cuda:0
+2026-06-27 21:43:58 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:58 | [20260627_214317] | WARNING | _http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-06-27 21:43:58 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:59 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:59 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:59 | [20260627_214317] | INFO | model | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-06-27 21:43:59 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:43:59 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:43:59 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:00 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-06-27 21:44:00 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:00 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:00 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:00 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:01 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:01 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:01 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:02 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:02 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:03 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:03 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:03 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:03 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:04 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:04 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:04 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:04 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:04 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:04 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:05 | [20260627_214317] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:05 | [20260627_214317] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-27 21:44:06 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:06 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:06 | [20260627_214317] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-06-27 21:44:07 | [20260627_214317] | INFO | model | No device provided, using cuda:0
+2026-06-27 21:44:07 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:07 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:07 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:07 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:07 | [20260627_214317] | INFO | model | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-06-27 21:44:08 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:08 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:08 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:08 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-06-27 21:44:08 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:09 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:09 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:09 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:09 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:10 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:10 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:10 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:11 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:11 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:11 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:12 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:12 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:12 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:12 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:13 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:13 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:13 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:13 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:13 | [20260627_214317] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:14 | [20260627_214317] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-27 21:44:14 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:14 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:15 | [20260627_214317] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-06-27 21:44:15 | [20260627_214415] | INFO | main | Universal ingestion pipeline started. Session ID: [SESSION_ID=20260627_214415]
+2026-06-27 21:44:15 | [20260627_214415] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:44:15 | [20260627_214415] | INFO | main | Selected repository: 'Archon AI' from URL: '/home/lakshay/Archon AI'
+2026-06-27 21:44:15 | [20260627_214415] | ERROR | main | Pipeline failed in session 20260627_214415: Ingestion blocked: Archon cannot index its own codebase ('Archon AI') unless explicitly overridden with --allow-self-indexing.
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/main.py", line 87, in main
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Ingestion blocked: Archon cannot index its own codebase ('Archon AI') unless explicitly overridden with --allow-self-indexing.
+2026-06-27 21:44:15 | [20260627_214415] | INFO | main | Universal ingestion pipeline started. Session ID: [SESSION_ID=20260627_214415]
+2026-06-27 21:44:15 | [20260627_214415] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:44:15 | [20260627_214415] | INFO | main | Selected repository: 'Archon AI' from URL: '/home/lakshay/Archon AI'
+2026-06-27 21:44:15 | [20260627_214415] | INFO | clone_repo | Directory /home/lakshay/Archon AI/data/repositories/Archon AI already exists. Verifying Git repository status.
+2026-06-27 21:44:15 | [20260627_214415] | INFO | clone_repo | Valid Git repository found. Pulling latest changes from URL: /home/lakshay/Archon AI
+2026-06-27 21:44:18 | [20260627_214415] | INFO | clone_repo | Successfully pulled latest changes.
+2026-06-27 21:44:18 | [20260627_214415] | INFO | main | Cloning phase complete in 2.42s.
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Parsing repository 'Archon AI' recursively at '/home/lakshay/Archon AI/data/repositories/Archon AI'...
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments guessed lexer via code heuristics for '.gitignore'. Language: gas
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/.gitignore' (Detected language: gas)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file '.gitignore' (Detected language: gas)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'pyproject.toml'. Language: toml
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/pyproject.toml' (Detected language: toml)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file 'pyproject.toml' (Detected language: toml)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'README.md'. Language: markdown
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/README.md' (Detected language: markdown)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file 'README.md' (Detected language: markdown)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'main.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/main.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'main.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Falling back to extension dictionary for '.python-version' (ext: ''). Language: text
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/.python-version' (Detected language: text)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file '.python-version' (Detected language: text)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'logging_config.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/configs/logging_config.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file 'configs/logging_config.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'ingestion_config.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/configs/ingestion_config.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file 'configs/ingestion_config.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File skipped: '/home/lakshay/Archon AI/data/repositories/Archon AI/prd/Archon AI PRD.pdf' is classified as a binary file.
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'test_universal_ingestion.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/tests/test_universal_ingestion.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'tests/test_universal_ingestion.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'test_ast_parsers.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/tests/test_ast_parsers.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'tests/test_ast_parsers.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'test_semantic_enrichment.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/tests/test_semantic_enrichment.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'tests/test_semantic_enrichment.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'test_indexing_filters.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/tests/test_indexing_filters.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'tests/test_indexing_filters.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'ast_dataset.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/data/processed/ast_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file 'data/processed/ast_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'indexed_dataset.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/data/processed/indexed_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file 'data/processed/indexed_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'repository_dataset.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/data/processed/repository_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file 'data/processed/repository_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'embedding_dataset.json'. Language: json
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/data/processed/embedding_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser GenericParser for file 'data/processed/embedding_dataset.json' (Detected language: json)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'language_detector.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/parsing/language_detector.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/parsing/language_detector.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/parsing/parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/parsing/parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/parsing/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/parsing/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'clone_repo.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ingestion/clone_repo.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ingestion/clone_repo.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ingestion/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ingestion/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'file_filter.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ingestion/file_filter.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ingestion/file_filter.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'retriever.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/retrieval/retriever.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/retrieval/retriever.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/retrieval/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/retrieval/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/pipeline/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/pipeline/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/prompting/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/prompting/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'semantic_builder.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/enrichment/semantic_builder.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/enrichment/semantic_builder.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ast_parser/parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'javascript_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/javascript_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ast_parser/javascript_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'typescript_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/typescript_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ast_parser/typescript_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'models.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/models.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ast_parser/models.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'rust_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/rust_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ast_parser/rust_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'python_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/python_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ast_parser/python_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'registry.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/registry.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ast_parser/registry.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'generic_parser.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/ast_parser/generic_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/ast_parser/generic_parser.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/vectorstore/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/vectorstore/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'logger.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/utils/logger.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/utils/logger.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/utils/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/utils/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'config.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/utils/config.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/utils/config.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/llm/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/llm/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/chunking/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/chunking/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'manual_retriever.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/manual_retriever.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/embeddings/manual_retriever.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'embedder.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/embedder.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/embeddings/embedder.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'chroma_store.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/chroma_store.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/embeddings/chroma_store.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'indexer.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/indexer.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/embeddings/indexer.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | language_detector | Language detection: Pygments matched lexer via filename for '__init__.py'. Language: python
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/Archon AI/src/embeddings/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | parser | Selected parser PythonParser for file 'src/embeddings/__init__.py' (Detected language: python)
+2026-06-27 21:44:18 | [20260627_214415] | INFO | main | Parsing phase complete in 0.66s.
+2026-06-27 21:44:19 | [20260627_214415] | INFO | parser | Successfully saved 1832 records to data/processed/Archon AI/ast_dataset.json
+2026-06-27 21:44:19 | [20260627_214415] | INFO | parser | Successfully saved 1832 records to data/processed/Archon AI/embedding_dataset.json
+2026-06-27 21:44:19 | [20260627_214415] | INFO | main | Dataset saving phase complete in 0.39s.
+2026-06-27 21:44:19 | [20260627_214415] | INFO | main | Performance Metrics:
+  Clone Time: 2.4s
+  Parse Time: 0.7s
+  Dataset Save Time: 0.4s
+  Total Runtime: 3.5s
+2026-06-27 21:44:19 | [20260627_214419] | INFO | main | Universal ingestion pipeline started. Session ID: [SESSION_ID=20260627_214419]
+2026-06-27 21:44:19 | [20260627_214419] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:44:19 | [20260627_214419] | INFO | main | Selected repository: 'mock-repo-a' from URL: '/tmp/mock-repo-a'
+2026-06-27 21:44:19 | [20260627_214419] | ERROR | main | Pipeline failed in session 20260627_214419: Repository 'mock-repo-a' is already indexed. Use --force-reindex to rebuild it.
+Traceback (most recent call last):
+  File "/home/lakshay/Archon AI/main.py", line 105, in main
+    raise ValueError(
+        f"Repository '{repo_name}' is already indexed. Use --force-reindex to rebuild it."
+    )
+ValueError: Repository 'mock-repo-a' is already indexed. Use --force-reindex to rebuild it.
+2026-06-27 21:44:19 | [20260627_214419] | INFO | main | Universal ingestion pipeline started. Session ID: [SESSION_ID=20260627_214419]
+2026-06-27 21:44:19 | [20260627_214419] | INFO | config | Loaded custom ingestion configuration from /home/lakshay/Archon AI/configs/ingestion_config.json
+2026-06-27 21:44:19 | [20260627_214419] | INFO | main | Selected repository: 'mock-repo-a' from URL: '/tmp/mock-repo-a'
+2026-06-27 21:44:19 | [20260627_214419] | INFO | main | Repository 'mock-repo-a' is already indexed. Cleaning up old data first...
+2026-06-27 21:44:19 | [20260627_214419] | INFO | clone_repo | Cloning repository from /tmp/mock-repo-a into /home/lakshay/Archon AI/data/repositories/mock-repo-a...
+2026-06-27 21:44:19 | [20260627_214419] | INFO | clone_repo | Successfully cloned repository into /home/lakshay/Archon AI/data/repositories/mock-repo-a.
+2026-06-27 21:44:19 | [20260627_214419] | INFO | main | Cloning phase complete in 0.02s.
+2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | Parsing repository 'mock-repo-a' recursively at '/home/lakshay/Archon AI/data/repositories/mock-repo-a'...
+2026-06-27 21:44:19 | [20260627_214419] | INFO | language_detector | Language detection: Pygments matched lexer via filename for 'route_a.py'. Language: python
+2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | File accepted: '/home/lakshay/Archon AI/data/repositories/mock-repo-a/route_a.py' (Detected language: python)
+2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | Selected parser PythonParser for file 'route_a.py' (Detected language: python)
+2026-06-27 21:44:19 | [20260627_214419] | INFO | main | Parsing phase complete in 0.10s.
+2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/ast_dataset.json
+2026-06-27 21:44:19 | [20260627_214419] | INFO | parser | Successfully saved 1 records to data/processed/mock-repo-a/embedding_dataset.json
+2026-06-27 21:44:19 | [20260627_214419] | INFO | main | Dataset saving phase complete in 0.00s.
+2026-06-27 21:44:19 | [20260627_214419] | INFO | main | Performance Metrics:
+  Clone Time: 0.0s
+  Parse Time: 0.1s
+  Dataset Save Time: 0.0s
+  Total Runtime: 0.1s
+2026-06-27 21:44:19 | [20260627_214317] | INFO | model | No device provided, using cuda:0
+2026-06-27 21:44:20 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:20 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:20 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:20 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:20 | [20260627_214317] | INFO | model | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-06-27 21:44:21 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:21 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:21 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:21 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-06-27 21:44:21 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:21 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:22 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:22 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:22 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:22 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:23 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:23 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:23 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:24 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:24 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:24 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:24 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:25 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:25 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:25 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:25 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:26 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:26 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:26 | [20260627_214317] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-27 21:44:26 | [20260627_214317] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-27 21:44:27 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-27 21:44:27 | [20260627_214317] | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-06-27 21:44:27 | [20260627_214317] | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
